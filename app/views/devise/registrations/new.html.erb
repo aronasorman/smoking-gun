@@ -6,6 +6,9 @@
   <div><%= f.label :username %><br />
   <%= f.text_field :username %></div>
 
+  <div><%= f.label :name%><br />
+  <%= f.text_field :name %></div>
+
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
 
@@ -16,9 +19,9 @@
   <%= f.password_field :password_confirmation %></div>
 
   <div>
-  	<%= f.radio_button :is_head_counselor, "Head Counselor"%> Head Counselor
-    <%= f.radio_button :is_counselor, "Counselor"%>Counselor 
-    <%= f.radio_button :is_secretary, "Secretary"%>Secretary 
+  	<%= f.radio_button :is_head_counselor, "0"%> Head Counselor
+    <%= f.radio_button :is_counselor, "1"%>Counselor 
+    <%= f.radio_button :is_secretary, "0"%>Secretary 
   </div>
 
   <div><%= f.submit "Sign up" %></div>

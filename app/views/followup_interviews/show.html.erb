@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Comments:</b>
+  <%= @followup_interview.comments %>
+</p>
+
+<p>
+  <b>Planned intervention:</b>
+  <%= @followup_interview.planned_intervention %>
+</p>
+
+
+<%= link_to 'Edit', edit_followup_interview_path(@followup_interview) %> |
+<%= link_to 'Back', followup_interviews_path %>

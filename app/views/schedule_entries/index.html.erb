@@ -1,0 +1,21 @@
+<h1>Listing schedule_entries</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @schedule_entries.each do |schedule_entry| %>
+  <tr>
+    <td><%= link_to 'Show', schedule_entry %></td>
+    <td><%= link_to 'Edit', edit_schedule_entry_path(schedule_entry) %></td>
+    <td><%= link_to 'Destroy', schedule_entry, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Schedule entry', new_schedule_entry_path %>

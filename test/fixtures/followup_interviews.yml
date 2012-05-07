@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  comments: MyString
+  planned_intervention: MyString
+
+two:
+  comments: MyString
+  planned_intervention: MyString

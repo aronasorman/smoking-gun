@@ -1,0 +1,23 @@
+<h1>Listing nature_of_problem_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nature_of_problem_types.each do |nature_of_problem_type| %>
+  <tr>
+    <td><%= nature_of_problem_type.name %></td>
+    <td><%= link_to 'Show', nature_of_problem_type %></td>
+    <td><%= link_to 'Edit', edit_nature_of_problem_type_path(nature_of_problem_type) %></td>
+    <td><%= link_to 'Destroy', nature_of_problem_type, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nature of problem type', new_nature_of_problem_type_path %>

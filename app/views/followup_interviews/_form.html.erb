@@ -1,0 +1,25 @@
+<%= form_for(@followup_interview) do |f| %>
+  <% if @followup_interview.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@followup_interview.errors.count, "error") %> prohibited this followup_interview from being saved:</h2>
+
+      <ul>
+      <% @followup_interview.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_field :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :planned_intervention %><br />
+    <%= f.text_field :planned_intervention %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

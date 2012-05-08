@@ -1,0 +1,24 @@
+<div id="viewcounselor">
+
+<table>
+	<tr id="thead">
+		<td>Name</td>
+		<td>Year/Sections Assignments</td>
+	</tr>
+	<tr>
+		<% @counselors.each do |counselor| %>
+		<td><%= link_to counselor.name, counselor %></td>
+		<td>
+			<ul>
+				<% counselor.sections.each do |section| %>
+					<li><%= link_to (section.year.to_s + section.title), @section %></li>
+				<% end -%>
+			</ul>
+		</td>
+		<% end -%>
+	</tr>
+	
+	
+</table>
+
+</div>

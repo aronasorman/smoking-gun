@@ -1,5 +1,5 @@
 class Section < ActiveRecord::Base
   attr_accessible :name, :year
 
-  belongs_to :users
+  belongs_to :user
 end

@@ -159,6 +159,7 @@ padding-top: 5px;
 #viewcounselor{
 float:left;
 clear: right;
+font-size: 10pt;
 padding-top: 20px;
 padding-bottom: 20px;
 padding-left: 20px;
@@ -366,12 +367,13 @@ padding-top: 20px;
 }
 
 #graypart{
-width:200px;
+width:250px;
 background-color: #f0f0f0;
 }
 
 #profile table{
 width:700px;
+margin-top: 20px;
 }
 
 #profhead{
@@ -421,5 +423,8 @@ text-align: center;
 background-color: #0260a8;
 }
 
+form#new_user {
+	padding: 10px;
+}
 
 

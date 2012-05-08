@@ -31,18 +31,20 @@
 		</div>
 	</form>	
 		<div id="center">
-		
-			<div id= "sidebar">
-				<ul>
-					<li><%= link_to "Change password", edit_user_password_path(current_user) %></li>
-					<li><a href="viewcounselor.html" title="">View counselor accounts</a></li>
-					<li><a href="viewstudent.html" title="">View student profiles</a></li>
-					<li><a href="assigncounselor.html" title="assign counselors to respective students/sections">Assign counselor</a></li>
-					<li><a href="editweekly.html" title="assign counselors to respective students/sections">Edit weekly plan</a></li>
-					<li><a href="conductcounseling.html" title="assign counselors to respective students/sections">Conduct counseling</a></li>			</ul>	
-				
-			<br style="clear:both" /> 
-			</div>
+			<% if user_signed_in? %>	
+				<div id= "sidebar">
+					<ul>
+						<li><%= link_to "Change password", edit_user_password_path(current_user) %></li>
+						<li><a href="viewcounselor.html" title="">View counselor accounts</a></li>
+						<li><a href="viewstudent.html" title="">View student profiles</a></li>
+						<li><a href="assigncounselor.html" title="assign counselors to respective students/sections">Assign counselor</a></li>
+						<li><a href="editweekly.html" title="assign counselors to respective students/sections">Edit weekly plan</a></li>
+						<li><a href="conductcounseling.html" title="assign counselors to respective students/sections">Conduct counseling</a></li>
+					</ul>	
+					
+					<br style="clear:both" /> 
+				</div>
+			<% end %>
 			
 			<div id="content">
 				<div id="stamps">
@@ -54,7 +56,7 @@
 						<% if user_signed_in? %>
 							User Identified As: <span id="name"><%= current_user.name %></span>
 							<br/>
-							Position: <span id="position" >position</span>
+							Position: <span id="position" ><%= current_user.role %></span>
 						<% end %>
 					</div>
 					
@@ -64,6 +66,15 @@
 	<%= yield %>
 	</div>
 	</div>
+					<div id="footer">
+            <p>
+              Ateneo High School Guidance Office Automated System <br/>
+              Designed and developed by A-Team <br/>
+              Copyright 2011 <br/>
+            </p>
+            
+          </div>				
 	</div>
+          <script type="text/javascript" src="/assets/after.js"></script>
 	</body>
 	</html>

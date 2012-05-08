@@ -18,7 +18,7 @@ width: 960px;
 #header{
 width: inherit;
 height: 150px;
-background-image: url(assets/banner.jpg);
+background-image: url(/assets/banner.jpg?body=1);
 background-repeat: no-repeat;
 background-color: #0260a8;
 }
@@ -126,10 +126,6 @@ clear: right;
 padding-top: 20px;
 padding-bottom: 20px;
 padding-left: 20px;
-}
-
-#freespace table{
-width: 700px;
 }
 
 #freespace table a{

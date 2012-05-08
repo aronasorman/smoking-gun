@@ -37,7 +37,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.string :authentication_token
 
       t.string :name
-      t.integer :user_id
       t.boolean :is_head_counselor
       t.boolean :is_counselor
       t.boolean :is_secretary

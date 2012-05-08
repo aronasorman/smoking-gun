@@ -1,30 +1,29 @@
-<h2>Sign up</h2>
+<div id="profile">
+  <div id="graypart">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+      <div><%= f.label :username %>
+      <%= f.text_field :username %></div>
 
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
+      <div><%= f.label :name%>
+      <%= f.text_field :name %></div>
 
-  <div><%= f.label :name%><br />
-  <%= f.text_field :name %></div>
+      <div><%= f.label :email %>
+      <%= f.email_field :email %></div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+      <div><%= f.label :password %>
+      <%= f.password_field :password %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+      <div><%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div>
-  	<%= f.radio_button :is_head_counselor, "0"%> Head Counselor
-    <%= f.radio_button :is_counselor, "1"%>Counselor 
-    <%= f.radio_button :is_secretary, "0"%>Secretary 
+      <div>
+       	<%= f.radio_button :role, "Head Counselor" %> Head Counselor<br/>
+        <%= f.radio_button :role, "Counselor", :checked => true %>Counselor<br/> 
+        <%= f.radio_button :role, "Secretary" %>Secretary<br/> 
+      </div>
+      <div><%= f.submit "Sign up" %></div>
+    <% end %>
   </div>
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
-
-<%= render "links" %>
+</div>

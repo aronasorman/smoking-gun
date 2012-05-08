@@ -1,17 +1,46 @@
-<h2>Sign in</h2>
+<div id="title">
+				<a href="log-in.html">Login</a>
+			</div>
+			
+			
+		<!--le only area you can edit-->
+			
+			<div id ="freespace">
+				<div id="log-box">
+				  <%= devise_error_messages! %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
+					<form method="POST">
+					<table>
+						<tr >
+							<td colspan="2"id="loghead">Log-in</td>
+						</tr>
+<!-- 						<tr>
+              <td>Username:</td>
+              <td><input type="text" name="username" id="user[username]" size="25"></td>
+            </tr>
+            <tr>
+              <td>Password:</td>
+              <td><input type="password" name="password" id="user[password]" size="25"></td>
+            </tr>
+            <tr>
+              <td><input type="submit" name="commit" value="Sign in"></td>
+            </tr>
+ -->					</table>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	  <div> username
+	  <%= f.text_field :username %></div>
+	  <br/>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+	  <div> password
+	  <%= f.password_field :password %></div>
+		<br/>
 
   <div><%= f.submit "Sign in" %></div>
 <% end %>
-
-<%= render "links" %>
+				</form>
+				</div>
+			</div>
+			
+	
+			
+				

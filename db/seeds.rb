@@ -6,3 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 nature_of_problems = NatureOfProblemType.create([{name: 'Followup Interview'}, {name: 'Routine Interview'}, {name: 'Other'}])
+
+sections = []
+
+[1, 2, 3, 4].each do |year|
+	('A' .. 'P').each do |title|
+		sections.append Section.create([{name: year.to_s + title}])
+	end
+end
+
+require 'Date'
+periods = []
+(-Period.num .. Period.num).each do |period_num|
+	date = period_num.day.from_now
+	Period.per_day.times do |day_num|
+		periods.append Period.create({date: date, num: day_num})
+	end
+end

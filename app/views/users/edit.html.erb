@@ -1,2 +1,30 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div id="counseloraccount">
+	
+	<!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->
+	
+	<div id="profile">
+		<div id="graypart">
+		<table>
+			<tr>
+				<td id="profhead" colspan="2">Profile:</td>
+			</tr>
+			<%= form_for @user do |f| %>
+				<tr>
+					<td class="label1">Email:</td>
+					<td><%= f.email_field :email %></td>
+				</tr>
+				<tr>
+					<td class="label1"><%= f.label :name %></td>
+					<td><%= f.text_field :name %></td>
+				</tr>
+				<tr>
+				<td><%= f.submit "submit" %></td>
+			</tr>
+			<% end -%>
+		</table>
+		</div>
+	</div>
+	
+	<!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->
+	
+</div>

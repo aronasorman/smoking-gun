@@ -378,7 +378,7 @@ margin-top: 20px;
 
 #profhead{
 background-color:#a8bcdf;
-padding-top:50px;
+padding-top:20px;
 }
 
 #profile .label1{
@@ -425,6 +425,11 @@ background-color: #0260a8;
 
 form#new_user {
 	padding: 10px;
+}
+
+ul#head_bitch {
+	margin:2px;
+	margin-left:0px;
 }
 
 

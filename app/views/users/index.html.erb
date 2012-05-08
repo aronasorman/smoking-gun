@@ -11,7 +11,7 @@
 				<td>
 					<ul>
 						<% counselor.sections.each do |section| %>
-							<li><%= link_to (section.year.to_s + section.title), @section %></li>
+							<li><%= link_to section.name, section %></li>
 						<% end -%>
 					</ul>
 				</td>

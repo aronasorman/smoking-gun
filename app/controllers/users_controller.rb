@@ -11,11 +11,16 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    sections = params[:section].map {|section_name| Section.find_by_name(section_name)}
+    @user.sections = sections
+    @user.save
     @user.update_attributes(params[:user])
     redirect_to users_path
   end
 
   def edit
     @user = User.find(params[:id])
+    available_sections = Section.where(:user_id == nil)
+    @sections = @user.sections + available_sections
   end
 end

@@ -1,0 +1,29 @@
+    <div id="viewstudent">
+    
+    <table>
+        <tr id="thead">
+            <td>Name</td>
+            <td>ID No.</td>
+            <td>Year/Section</td>
+            <td>Counselor</td>
+        </tr>
+        <% @students.each do |student| %>
+            <tr>
+                <% student_name = student.first_name + student.last_name %>
+                <% section = student.section %>
+                <% counselor = section.counselor %>
+                <td><%= link_to student_name, student %></td>
+                <td><%= student.id %></td>
+                <td><%= link_to section.name, section %></td>
+                <td><%= link_to counselor.name,  counselor %></td>
+            </tr>
+        <% end -%>
+   </table>
+    </div>
+    
+            
+<!-- the only area you can edit-->
+        
+<br style="clear:both" /> 
+    
+</div> 

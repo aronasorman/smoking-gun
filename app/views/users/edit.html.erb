@@ -20,6 +20,13 @@
 				<tr>
 				<td><%= f.submit "submit" %></td>
 			</tr>
+
+			<% if current_user.role == 'Head Counselor' %>
+				<% @sections.each do |section| %>
+					<% section_name = (section.year.to_s + section.name) %>
+					<%= check_box_tag 'section[]', section_name %>	<%= section_name %>
+				<% end -%>
+			<% end -%>
 			<% end -%>
 		</table>
 		</div>

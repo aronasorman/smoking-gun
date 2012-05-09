@@ -1,0 +1,20 @@
+<% if user_signed_in? %>	
+	<div id= "sidebar">
+		<ul>
+			<% if current_user.role != 'Secretary' %>
+				<li><%= link_to "Change password", edit_user_password_path(current_user) %></li>
+				<% if current_user.role == 'Head Counselor' %>
+					<li><%= link_to "View counselor accounts", users_path %></li>
+					<li><a href="assigncounselor.html" title="assign counselors to respective students/sections">Assign counselor</a></li>
+				<% end -%>
+				<li><a href="viewstudent.html" title="">View student profiles</a></li>
+				<li><a href="editweekly.html" title="assign counselors to respective students/sections">Edit weekly plan</a></li>
+				<li><a href="conductcounseling.html" title="assign counselors to respective students/sections">Conduct counseling</a></li>
+			<% else %>
+				Haha secretary!
+			<% end %>
+		</ul>	
+		
+		<br style="clear:both" /> 
+	</div>
+<% end %>

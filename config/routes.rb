@@ -1,4 +1,14 @@
 GuidanceRails::Application.routes.draw do
+  resources :students
+
+  get "users/edit"
+
+  get "users/index"
+
+  get "users/show"
+
+  get "users/update"
+
   resources :nature_of_problem_types
 
   resources :followup_interviews
@@ -24,6 +34,7 @@ GuidanceRails::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
+
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
@@ -48,6 +59,9 @@ GuidanceRails::Application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
+  resources :users do
+    resources :sections
+  end
 
   # Sample resource route with more complex sub-resources
   #   resources :products do

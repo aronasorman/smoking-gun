@@ -7,17 +7,6 @@
     <th></th>
   </tr>
 
-<% @periods.each do |period| %>
-  <tr>
-    <td><%= period.num %></td>
-    <td><%= period.date %></td>
-    <td><%= link_to 'Show', period %></td>
-    <td><%= link_to 'Edit', edit_period_path(period) %></td>
-    <td><%= link_to 'Destroy', period, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Period', new_period_path %>

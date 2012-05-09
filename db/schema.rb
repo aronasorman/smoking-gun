@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120508090946) do
+ActiveRecord::Schema.define(:version => 20120509081657) do
 
   create_table "followup_interviews", :force => true do |t|
     t.string   "comments"
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20120508090946) do
     t.text     "interests"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
+    t.integer  "student_id"
   end
 
   create_table "users", :force => true do |t|
@@ -94,6 +95,7 @@ ActiveRecord::Schema.define(:version => 20120508090946) do
     t.string   "last_sign_in_ip"
     t.string   "password_salt"
     t.string   "name"
+    t.integer  "user_id"
     t.boolean  "is_head_counselor"
     t.boolean  "is_counselor"
     t.boolean  "is_secretary"

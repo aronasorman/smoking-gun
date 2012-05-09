@@ -1,86 +1,76 @@
-	<!DOCTYPE html>
-	<html>
-	<head>
-	  <%= stylesheet_link_tag    "application", :media => "all" %>
-	  <%= javascript_include_tag "application", :defaults %>
-	  <%= csrf_meta_tags %>
-		<title>Ateneo High School Guidance Office</title>
-		
-	</head>
-	<body>
-	<form action="" method="get">
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render "styleshit"%>
+  
+  <title>Ateneo High School Guidance Office</title>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-	<div id="container">
-		
-		<div id="header">
-		</div>
+<div id="container">
+	
+	<div id="header">
+	</div>
 
-		
-		<div id= "nav">
-			<ul>
+	
+	<div id= "nav">
+		<ul>
+			<form action="" method="get">
 				<li><%= link_to "home", root_url %></li>
 				<li><a href="#">faqs</a></li>
 				<li><a href="#">about us</a></li>
 				<li><%= link_to "logout" , destroy_user_session_path , :method => :delete %></li>
-				<li><a href="#">
-					<input type="text" size="20" name="text1" value="">
-					<input type="button" name="search" value="search">
+				<li><a href="#">			
+						<input type="text" size="20" name="text1" value="type here">
+						<input type="button" name="search" value="search">
+					
 				</a></li>
-				
-			</ul>
-		</div>
-	</form>	
-		<div id="center">
-			<% if user_signed_in? %>	
-				<div id= "sidebar">
-					<ul>
-						<% if current_user.role != 'Secretary' %>
-							<li><%= link_to "Change password", edit_user_password_path(current_user) %></li>
-							<% if current_user.role == 'Head Counselor' %>
-								<li><%= link_to "View counselor accounts", users_path %></li>
-								<li><a href="assigncounselor.html" title="assign counselors to respective students/sections">Assign counselor</a></li>
-							<% end -%>
-							<li><a href="viewstudent.html" title="">View student profiles</a></li>
-							<li><a href="editweekly.html" title="assign counselors to respective students/sections">Edit weekly plan</a></li>
-							<li><a href="conductcounseling.html" title="assign counselors to respective students/sections">Conduct counseling</a></li>
-						<% else %>
-							Haha secretary!
-						<% end %>
-					</ul>	
-					
-					<br style="clear:both" /> 
-				</div>
-			<% end %>
+			</form>
 			
-			<div id="content">
-				<div id="stamps">
 			
-					<div id="date">
-					</div>
-				
-					<div id="identifiers">
-						<% if user_signed_in? %>
-							User Identified As: <span id="name"><%= current_user.name %></span>
-							<br/>
-							Position: <span id="position" ><%= current_user.role %></span>
-						<% end %>
-					</div>
-					
-				</div>
-					
-				
-	<%= yield %>
-				</div>
+		</ul>
 	</div>
+	
+	<div id="center">
+	
+		<%= render "sidebar" %>
+		
+		<div id="content">
+			<div id="stamps">
+		
+				<div id="date">
+				</div>
+			
+				<div id="identifiers">
+					<% if user_signed_in? %>
+						User Identified As: <span id="name"><%= current_user.name %></span>
+						<br/>
+						Position: <span id="position" ><%= current_user.role %></span>
+					<% end %>
+				</div>
+				
+				
+			</div>
+			<%= yield %>
+			
+		</div> 
+		
+
 	</div>
-					<div id="footer">
-            <p>
-              Ateneo High School Guidance Office Automated System <br/>
-              Designed and developed by A-Team <br/>
-              Copyright 2011 <br/>
-            </p>
-            
-          </div>				
-	</body>
-          <script type="text/javascript" src="/assets/after.js"></script>
-	</html>
+
+	<div id="footer">
+		<p>
+		Ateneo High School Guidance Office Automated System <br/>
+		Designed and developed by A-Team <br/>
+		Copyright 2011 <br/>
+		</p>
+		
+	</div>
+	
+</div>	
+
+</body>
+	<script type="text/javascript" src="/assets/after.js?body=1"></script>
+</html>

@@ -1,8 +1,10 @@
 class StudentsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /students
   # GET /students.json
   def index
-    @students = Student.all
+    sections_handled = current_user.sections
+    @students = sections_handled.map! {|section| section.students }.flatten!
 
     respond_to do |format|
       format.html # index.html.erb

@@ -11,7 +11,7 @@
 				<li><a href="editweekly.html" title="assign counselors to respective students/sections">Edit weekly plan</a></li>
 				<li><a href="conductcounseling.html" title="assign counselors to respective students/sections">Conduct counseling</a></li>
 			<% else %>
-				Haha secretary!
+				<li><%= link_to "Upload CSV file", :action => "upload",  :controller => "csv" %></li>
 			<% end %>
 		</ul>	
 		

@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    available_sections = Section.where(:user_id == nil)
-    @sections = @user.sections + available_sections
+    @available_sections = Section.where(:user_id == nil)
+    @sections = (@user.sections + @available_sections).uniq!.sort!
   end
 end

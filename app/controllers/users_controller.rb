@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 	
   def index
   	@counselors = User.all.find_all { |user| user.role == 'Counselor' || user.role == 'Head Counselor' }
-  end
+end
 
   def show
   	@user = User.find(params[:id])

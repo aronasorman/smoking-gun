@@ -8,18 +8,27 @@
 		<!--le only area you can edit-->
 			<div id ="freespace">
 				<div id="log-box">
-				  <%= devise_error_messages! %>
+				<table>
+						<tr >
+							<td colspan="2"id="loghead">Log-in</td>
+						</tr>
+						<tr><td colspan="2">
+							<%= devise_error_messages! %>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-	  <div> username
+	  <div> Username
 	  <%= f.text_field :username %></div>
 	  <br/>
 
-	  <div> password
+	  <div> Password
 	  <%= f.password_field :password %></div>
 		<br/>
 
   <div><%= f.submit "Sign in" %></div>
-<% end %>
+<% end %></td>
+						</tr>
+						
+					</table>
+				  
 				</div>
 			</div>
 			

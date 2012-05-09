@@ -1,35 +1,40 @@
+<br>
+<br>
 <div id="title">
 				<a href="log-in.html">Login</a>
 			</div>
 			
 			
 		<!--le only area you can edit-->
-			
 			<div id ="freespace">
 				<div id="log-box">
-				  <%= devise_error_messages! %>
-
-					<form method="POST">
+					<%= devise_error_messages! %>
+					<form action="">
+					<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 					<table>
 						<tr >
 							<td colspan="2"id="loghead">Log-in</td>
 						</tr>
+						<tr>
+							<td>Username:</td>
+							<td><%= f.text_field :username %></td>
+						</tr>
+						<tr>
+							<td>Password:</td>
+							<td><%= f.password_field :password %></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="Log-in" onclick="location.href='mainpage.html'"></td>
+						</tr>
 					</table>
-  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-	  <div> username
-	  <%= f.text_field :username %></div>
-	  <br/>
-
-	  <div> password
-	  <%= f.password_field :password %></div>
-		<br/>
-
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-				</form>
+					<% end %>
+					</form>
 				</div>
 			</div>
 			
+			
 	
 			
+		<!--le only area you can edit-->
 				
+		<br style="clear:both" /> 

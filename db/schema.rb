@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120508020713) do
+ActiveRecord::Schema.define(:version => 20120508090946) do
 
   create_table "followup_interviews", :force => true do |t|
     t.string   "comments"
@@ -50,10 +50,35 @@ ActiveRecord::Schema.define(:version => 20120508020713) do
   end
 
   create_table "sections", :force => true do |t|
-    t.integer  "year"
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
+
+  create_table "students", :force => true do |t|
+    t.text     "picture"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "middle_name"
+    t.integer  "section_id"
+    t.string   "nickname"
+    t.string   "address"
+    t.string   "telno"
+    t.string   "celno"
+    t.string   "email"
+    t.date     "birthdate"
+    t.string   "birthplace"
+    t.text     "sibling_comments"
+    t.text     "family_concerns"
+    t.string   "most_significant_person"
+    t.text     "why_significant"
+    t.boolean  "is_special_guidance_needed"
+    t.text     "special_guidance_elaboration"
+    t.text     "work_experience"
+    t.text     "interests"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -69,7 +94,6 @@ ActiveRecord::Schema.define(:version => 20120508020713) do
     t.string   "last_sign_in_ip"
     t.string   "password_salt"
     t.string   "name"
-    t.integer  "user_id"
     t.boolean  "is_head_counselor"
     t.boolean  "is_counselor"
     t.boolean  "is_secretary"

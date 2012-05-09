@@ -8,9 +8,9 @@
 		<!--le only area you can edit-->
 			<div id ="freespace">
 				<div id="log-box">
-				  <%= devise_error_messages! %>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-	  <div> username
+	  <%= devise_error_messages! %>
+	  <div> ID number
 	  <%= f.text_field :username %></div>
 	  <br/>
 

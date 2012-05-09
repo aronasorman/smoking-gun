@@ -4,16 +4,28 @@
 		"selected_items":
 		[
 			[
+				"tel",
+				"tel1"
+			],
+			[
+				"mi",
+				"middle_name"
+			],
+			[
+				"file_fi",
+				"file_field_tag  (function)"
+			],
+			[
+				"li",
+				"<li>${1001:$SELECTION}</li>"
+			],
+			[
 				"section",
 				"section_name"
 			],
 			[
 				"H",
 				"Head"
-			],
-			[
-				"li",
-				"li"
 			],
 			[
 				"td",
@@ -80,42 +92,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/periods/index.html.erb",
+			"file": "app/models/student.rb",
 			"settings":
 			{
-				"buffer_size": 477,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/environments/development.rb",
-			"settings":
-			{
-				"buffer_size": 1458,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/application.rb",
-			"settings":
-			{
-				"buffer_size": 2719,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/layouts/application.html.erb",
-			"settings":
-			{
-				"buffer_size": 2445,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/devise/registrations/new.html.erb",
-			"settings":
-			{
-				"buffer_size": 996,
+				"buffer_size": 1410,
 				"line_ending": "Unix"
 			}
 		}
@@ -129,6 +109,10 @@
 			[
 				":w",
 				":w - Save"
+			],
+			[
+				":wq",
+				"Bracket Highlighter: Swap Quotes"
 			],
 			[
 				":W",
@@ -204,46 +188,55 @@
 	},
 	"file_history":
 	[
+		"/Users/richard/Desktop/guidance-rails/Vagrantfile",
+		"/Users/richard/Desktop/guidance-rails/lib/tasks/uploadcsv.rake",
+		"/Users/richard/Desktop/guidance-rails/Gemfile",
+		"/Users/richard/Desktop/guidance-rails/app/controllers/csv_controller.rb",
+		"/Users/richard/Desktop/guidance-rails/app/views/csv/upload.html.erb",
+		"/Users/richard/Desktop/guidance-rails/config/routes.rb",
+		"/Users/richard/Desktop/guidance-rails/app/views/application/_sidebar.html.erb",
+		"/Users/richard/Desktop/guidance-rails/app/views/layouts/application.html.erb",
+		"/Users/richard/Desktop/guidance-rails/app/models/student.rb",
+		"/Users/richard/Desktop/guidance-rails/db/seeds.rb",
+		"/Users/richard/Desktop/guidance-rails/config/database.yml",
+		"/Users/richard/Desktop/guidance-rails/app/models/section.rb",
+		"/Users/richard/Desktop/guidance-rails/db/migrate/20120509081657_add_student_id_to_students.rb",
+		"/Users/richard/Desktop/guidance-rails/.gitignore",
+		"/Users/richard/Desktop/guidance-rails/app/views/periods/index.html.erb",
+		"/Users/richard/Desktop/guidance-rails/app/controllers/users_controller.rb",
+		"/Users/richard/Desktop/guidance-rails/db/schema.rb",
+		"/Users/richard/Desktop/guidance-rails/app/views/devise/sessions/new.html.erb",
+		"/Users/richard/Desktop/guidance-rails/app/views/devise/registrations/new.html.erb",
+		"/Users/richard/Desktop/guidance-rails/config/application.rb",
+		"/Users/richard/Desktop/guidance-rails/config/environments/development.rb",
 		"/Users/richard/Desktop/guidance-rails/lib/utils.rb",
 		"/Users/richard/Desktop/guidance-rails/app/views/students/index.html.erb",
 		"/Users/richard/Desktop/guidance-rails/db/migrate/20120507043158_create_periods.rb",
-		"/Users/richard/Desktop/guidance-rails/app/views/layouts/application.html.erb",
-		"/Users/richard/Desktop/guidance-rails/db/seeds.rb",
 		"/Users/richard/Desktop/guidance-rails/app/models/period.rb",
 		"/Users/richard/Desktop/guidance-rails/app/assets/stylesheets/style.css",
 		"/Users/richard/Desktop/guidance-rails/app/views/users/show.html.erb",
 		"/Users/richard/Desktop/guidance-rails/app/assets/stylesheets/mainstyle.css",
-		"/Users/richard/Desktop/guidance-rails/config/routes.rb",
 		"/Users/richard/Desktop/guidance-rails/app/models/user.rb",
-		"/Users/richard/Desktop/guidance-rails/app/controllers/users_controller.rb",
 		"/Users/richard/Desktop/guidance-rails/app/views/users/edit.html.erb",
 		"/Users/richard/Desktop/guidance-rails/app/views/users/index.html.erb",
 		"/Users/richard/Desktop/guidance-rails/db/migrate/20120508081029_remove_year_from_sections.rb",
 		"/Users/richard/Desktop/guidance-rails/db/migrate/20120507042905_create_sections.rb",
 		"/Users/richard/Desktop/guidance-rails/app/assets/stylesheets/users.css.scss",
-		"/Users/richard/Desktop/guidance-rails/app/models/section.rb",
 		"/Users/richard/Desktop/guidance-rails/db/migrate/20120508045058_add_user_id_to_sections.rb",
-		"/Users/richard/Desktop/guidance-rails/app/views/periods/index.html.erb",
 		"/Users/richard/Desktop/guidance-rails/app/views/devise/passwords/edit.html.erb",
-		"/Users/richard/Desktop/guidance-rails/app/views/devise/registrations/new.html.erb",
-		"/Users/richard/Desktop/guidance-rails/app/views/devise/sessions/new.html.erb",
 		"/Users/richard/Desktop/guidance-rails/config/initializers/devise.rb",
 		"/Users/richard/Desktop/guidance-rails/app/views/followup_interviews/new.html.erb",
-		"/Users/richard/Desktop/guidance-rails/Gemfile",
 		"/Users/richard/Desktop/guidance-rails/db/migrate/20120508020713_add_role_to_users.rb",
 		"/Users/richard/Desktop/guidance-rails/app/assets/stylesheets_bk/style.css",
 		"/Users/richard/Desktop/guidance-rails/db/migrate/20120507065118_add_username_to_users.rb",
 		"/Users/richard/Desktop/guidance-rails/db/migrate/20120507042322_devise_create_users.rb",
 		"/Users/richard/Desktop/guidance-rails/app/views/devise/confirmations/new.html.erb",
 		"/Users/richard/Desktop/guidance-rails/server/config/routes.rb",
-		"/Users/richard/Desktop/guidance-rails/config/environments/development.rb",
 		"/Users/richard/Desktop/guidance-rails/app/models/nature_of_problem_type.rb",
 		"/Users/richard/Desktop/guidance-rails/app/models/followup_interview.rb",
 		"/Users/richard/Desktop/guidance-rails/app/models/interview.rb",
 		"/Users/richard/Desktop/guidance-rails/app/models/interview_type.rb",
 		"/Users/richard/Desktop/guidance-rails/app/models/schedule_entry.rb",
-		"/Users/richard/Desktop/guidance-rails/config/database.yml",
-		"/Users/richard/Desktop/guidance-rails/Vagrantfile",
 		"/Users/richard/Desktop/guidance-rails/guidance-rails.sublime-project",
 		"/Users/richard/Desktop/guidance-rails/lib/assets/generate_periods.rb",
 		"/Users/richard/Desktop/guidance-rails/README.rdoc",
@@ -293,6 +286,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/Users/richard/Desktop/guidance-rails/app",
 			"informationaboutfamily.html",
 			"config.py",
 			""
@@ -303,6 +297,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Section.find_by_name(section) ",
+			"mainpage.html",
 			"picture",
 			"td",
 			"class",
@@ -373,13 +369,13 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"static/",
 			"       "
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -388,133 +384,23 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/periods/index.html.erb",
+					"file": "app/models/student.rb",
 					"settings":
 					{
-						"buffer_size": 477,
+						"buffer_size": 1410,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"text-indent": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": false,
-							"sublimelinter_delay": 0.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"Python Django": "python"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "config/environments/development.rb",
-					"settings":
-					{
-						"buffer_size": 1458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								1292,
+								1292
 							]
 						],
 						"settings":
@@ -602,335 +488,6 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "config/application.rb",
-					"settings":
-					{
-						"buffer_size": 2719,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"text-indent": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": false,
-							"sublimelinter_delay": 0.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"Python Django": "python"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/layouts/application.html.erb",
-					"settings":
-					{
-						"buffer_size": 2445,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"text-indent": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": false,
-							"sublimelinter_delay": 0.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"Python Django": "python"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 56.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/devise/registrations/new.html.erb",
-					"settings":
-					{
-						"buffer_size": 996,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								204
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"text-indent": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": false,
-							"sublimelinter_delay": 0.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"Python Django": "python"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -985,6 +542,90 @@
 		"selected_items":
 		[
 			[
+				"va",
+				"Vagrantfile"
+			],
+			[
+				"student",
+				"app/models/student.rb"
+			],
+			[
+				"see",
+				"db/seeds.rb"
+			],
+			[
+				"section",
+				"app/models/section.rb"
+			],
+			[
+				"student_id",
+				"db/migrate/20120509081657_add_student_id_to_students.rb"
+			],
+			[
+				".git",
+				".gitignore"
+			],
+			[
+				"gemfi",
+				"Gemfile"
+			],
+			[
+				"csvcon",
+				"app/controllers/csv_controller.rb"
+			],
+			[
+				"csvupl",
+				"app/views/csv/upload.html.erb"
+			],
+			[
+				"app",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"viewside",
+				"app/views/application/_sidebar.html.erb"
+			],
+			[
+				"viewapp",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"apphtml",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"sessnew",
+				"app/views/devise/sessions/new.html.erb"
+			],
+			[
+				"periodin",
+				"app/views/periods/index.html.erb"
+			],
+			[
+				"userscontr",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"regnew",
+				"app/views/devise/registrations/new.html.erb"
+			],
+			[
+				"sessionnew",
+				"app/views/devise/sessions/new.html.erb"
+			],
+			[
+				"periodinde",
+				"app/views/periods/index.html.erb"
+			],
+			[
 				"regisnew",
 				"app/views/devise/registrations/new.html.erb"
 			],
@@ -998,14 +639,6 @@
 			],
 			[
 				"seeds",
-				"db/seeds.rb"
-			],
-			[
-				"app",
-				"app/views/layouts/application.html.erb"
-			],
-			[
-				"see",
 				"db/seeds.rb"
 			],
 			[
@@ -1073,10 +706,6 @@
 				"app/models/user.rb"
 			],
 			[
-				"routes",
-				"config/routes.rb"
-			],
-			[
 				"contrll",
 				"app/controllers/users_controller.rb"
 			],
@@ -1121,20 +750,8 @@
 				"app/assets/stylesheets/mainstyle.css"
 			],
 			[
-				"userscontr",
-				"app/controllers/users_controller.rb"
-			],
-			[
 				"adduserid",
 				"db/migrate/20120508045058_add_user_id_to_sections.rb"
-			],
-			[
-				"section",
-				"app/models/section.rb"
-			],
-			[
-				"apphtml",
-				"app/views/layouts/application.html.erb"
 			],
 			[
 				"",
@@ -1153,10 +770,6 @@
 				"app/controllers/user_controller.rb"
 			],
 			[
-				"sessionnew",
-				"app/views/devise/sessions/new.html.erb"
-			],
-			[
 				"register",
 				"app/views/devise/registrations/new.html.erb"
 			],
@@ -1165,16 +778,8 @@
 				"app/views/devise/passwords/edit.html.erb"
 			],
 			[
-				"regnew",
-				"app/views/devise/registrations/new.html.erb"
-			],
-			[
 				"new",
 				"app/views/followup_interviews/new.html.erb"
-			],
-			[
-				"gemfi",
-				"Gemfile"
 			],
 			[
 				"addrole",
@@ -1377,10 +982,6 @@
 				"Gemfile"
 			],
 			[
-				"va",
-				"Vagrantfile"
-			],
-			[
 				"test",
 				"test_data.py"
 			],
@@ -1451,50 +1052,6 @@
 			[
 				"mainp",
 				"templates/mainpage.html"
-			],
-			[
-				"import",
-				"import_registrar_csv.py"
-			],
-			[
-				"informat",
-				"templates/informationaboutfamily_edit.html"
-			],
-			[
-				"ino",
-				"templates/informationaboutfamily.html"
-			],
-			[
-				"in",
-				"templates/informationaboutfamily.html"
-			],
-			[
-				"stud",
-				"templates/studentprofile.html"
-			],
-			[
-				"mode",
-				"model.py"
-			],
-			[
-				"html",
-				"templates/counseloraccount.html"
-			],
-			[
-				"m",
-				"main.py"
-			],
-			[
-				"mai",
-				"main.py"
-			],
-			[
-				"inf",
-				"templates/informationaboutfamily.html"
-			],
-			[
-				"inform",
-				"templates/informationaboutfamily.html"
 			]
 		],
 		"width": 0.0
@@ -1504,6 +1061,14 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"tripid",
+				"/Users/richard/Desktop/tripid/tripid.sublime-project"
+			],
+			[
+				"ecimdc",
+				"/Users/richard/Desktop/chikka/ecimdc/ecimdc.sublime-project"
+			],
 			[
 				"regcom",
 				"/Users/richard/Dropbox/regcom/website-next/regcom-site.sublime-project"
@@ -1517,15 +1082,7 @@
 				"/Users/richard/Desktop/guidance-rails/guidance-rails.sublime-project"
 			],
 			[
-				"ecimdc",
-				"/Users/richard/Desktop/chikka/ecimdc/ecimdc.sublime-project"
-			],
-			[
 				"trip",
-				"/Users/richard/Desktop/tripid/tripid.sublime-project"
-			],
-			[
-				"tripid",
 				"/Users/richard/Desktop/tripid/tripid.sublime-project"
 			],
 			[

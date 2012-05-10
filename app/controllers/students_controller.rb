@@ -3,8 +3,8 @@ class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
   def index
-    sections_handled = current_user.sections
-    @students = sections_handled.map! {|section| section.students }.flatten!
+    sections_handled = current_user.sections.map! {|section| section.id }
+    @students = Student.where( :section_id => sections_handled).page(params[:page]).per(15)
 
     respond_to do |format|
       format.html # index.html.erb

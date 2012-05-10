@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120510074712) do
+ActiveRecord::Schema.define(:version => 20120510081802) do
 
   create_table "followup_interviews", :force => true do |t|
     t.string   "comments"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(:version => 20120510074712) do
     t.integer  "student_id"
     t.string   "religion"
     t.string   "citizenship"
+    t.string   "grade_school"
   end
 
   create_table "users", :force => true do |t|

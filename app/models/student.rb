@@ -12,8 +12,7 @@ class Student < ActiveRecord::Base
   	data = file.read
   	CSV.parse(data, :headers => true, :encoding => "UTF-8", :header_converters => :symbol).each do |row|
   		id = row[:studno].gsub('-', '').to_i # remove the dash
-  		student = Student.find_by_student_id(id)
-  		student ||= Student.new({student_id: id})
+  		student = Student.find_or_create_by_student_id(id)
 
       section = row[:clno][0..1]
       student.section = Section.find_by_name(section) 
@@ -25,6 +24,7 @@ class Student < ActiveRecord::Base
       student.birthdate = Student.parse_date row[:dateofbirth]
       student.telno = row[:tel1].gsub(150.chr, '') unless row[:tel1].nil?
       student.celno = row[:tel2].gsub(150.chr, '') unless row[:tel2].nil?
+      student.grade_school = row[:gs_name]
 
   		student.save
   	end

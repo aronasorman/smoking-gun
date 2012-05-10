@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120509081657) do
+ActiveRecord::Schema.define(:version => 20120510031137) do
 
   create_table "followup_interviews", :force => true do |t|
     t.string   "comments"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20120509081657) do
   end
 
   create_table "students", :force => true do |t|
-    t.text     "picture"
+    t.binary   "picture"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "middle_name"
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(:version => 20120509081657) do
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
     t.integer  "student_id"
+    t.string   "religion"
+    t.string   "citizenship"
   end
 
   create_table "users", :force => true do |t|

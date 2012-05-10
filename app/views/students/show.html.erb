@@ -1,105 +1,121 @@
-<p id="notice"><%= notice %></p>
+    <!-- the only area you can edit-->
+    
+      <div id="counseloraccount">
+        
+        <div id="counselornav">
+          <ul>
+            <li><a href="studentprofile.html">Personal Information</a></li>
+            <li><a href="informationaboutfamily.html">Information About Family</a></li>
+            <li><a href="acad.html">Academic History</a></li>
+            <li><a href="counselor_notations.html">Notations</a></li>
+          </ul>
+        </div>
+        
+        <!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->
+        
+        <div id="profile">
+          <div id="graypart">
+          <table>
+            <tr>
+              <td id="profhead" colspan="2">Profile:</td>
+            </tr>
+            <tr>
+              <td class="label1">Name:</td>
+              <td> <%= [@student.first_name, @student.middle_name + '.', @student.last_name].join ' ' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label1">Nickname:</td>
+              <td><%= @student.nickname %></td>
+            </tr>
+            <tr>
+              <td class="label1">City Address:</td>
+              <td>
+                <%= @student.address %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label1">Telephone No.:</td>
+              <td>
+                <%= @student.telno %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label1">Cellphone No.:</td>
+              <td>
+                <%= @student.celno %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label1">E-mail Address:</td>
+              <td>
+                <%= @student.email %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label1">Date of Birth:</td>
+              <td>
+                <%= @student.birthdate %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label1">Place of Birth:</td>
+              <td>
+                <%= @student.birthplace %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label1">Religion:</td>
+              <td>
+                <%= @student.religion %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label1">Citizenship:</td>
+              <td>
+                <%= @student.citizenship %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label1">Physical Fitness</td>
+              <td><li>Height:5"6</li><li>Weight:118 lbs.</li></td>
+            </tr>
+            <tr>
+              <td class="label1">General Health:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="label1">Eyesight:</td>
+              <td>Excellent (E)</td>
+            </tr>
+            <tr>
+              <td class="label1">Hearing:</td>
+              <td>Excellent (E)</td>
+            </tr>
+            <tr>
+              <td class="label1">Teeth:</td>
+              <td>Excellent (E)</td>
+            </tr>
+            <tr>
+              <td class="label1">Lungs:</td>
+              <td>Excellent (E)</td>
+            </tr>
+            <tr>
+              <td class="label1">Handicaps:</td>
+              <td></td>
+            </tr>
+          </table>
+          <br/>
+          <%= link_to 'Edit', edit_student_path(@student) %>
+          </div>
+        </div>        
+        <!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->
+        
+      </div>
+      
+          
+    <!-- the only area you can edit-->
+        
+    <br style="clear:both" /> 
 
-<p>
-  <b>Picture:</b>
-  <%= @student.picture %>
-</p>
-
-<p>
-  <b>First name:</b>
-  <%= @student.first_name %>
-</p>
-
-<p>
-  <b>Last name:</b>
-  <%= @student.last_name %>
-</p>
-
-<p>
-  <b>Middle name:</b>
-  <%= @student.middle_name %>
-</p>
-
-<p>
-  <b>Section:</b>
-  <%= @student.section_id %>
-</p>
-
-<p>
-  <b>Nickname:</b>
-  <%= @student.nickname %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @student.address %>
-</p>
-
-<p>
-  <b>Telno:</b>
-  <%= @student.telno %>
-</p>
-
-<p>
-  <b>Celno:</b>
-  <%= @student.celno %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @student.email %>
-</p>
-
-<p>
-  <b>Birthdate:</b>
-  <%= @student.birthdate %>
-</p>
-
-<p>
-  <b>Birthplace:</b>
-  <%= @student.birthplace %>
-</p>
-
-<p>
-  <b>Sibling comments:</b>
-  <%= @student.sibling_comments %>
-</p>
-
-<p>
-  <b>Family concerns:</b>
-  <%= @student.family_concerns %>
-</p>
-
-<p>
-  <b>Most significant person:</b>
-  <%= @student.most_significant_person %>
-</p>
-
-<p>
-  <b>Why significant:</b>
-  <%= @student.why_significant %>
-</p>
-
-<p>
-  <b>Is special guidance needed:</b>
-  <%= @student.is_special_guidance_needed %>
-</p>
-
-<p>
-  <b>Special guidance elaboration:</b>
-  <%= @student.special_guidance_elaboration %>
-</p>
-
-<p>
-  <b>Work experience:</b>
-  <%= @student.work_experience %>
-</p>
-
-<p>
-  <b>Interests:</b>
-  <%= @student.interests %>
-</p>
-
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>

@@ -5,6 +5,8 @@ class Student < ActiveRecord::Base
 
   belongs_to :section
 
+  has_many :guardians
+
   def self.import(file)
     require 'Date'
   	data = file.read

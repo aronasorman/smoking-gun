@@ -20,10 +20,17 @@ class Student < ActiveRecord::Base
       student.last_name = row[:lname].gsub(150.chr, '')
 
       student.birthplace = row[:placeofbirth].gsub(150.chr, '') unless row[:placeofbirth].nil?
+      student.birthdate = Student.parse_date row[:dateofbirth]
       student.telno = row[:tel1].gsub(150.chr, '') unless row[:tel1].nil?
       student.celno = row[:tel2].gsub(150.chr, '') unless row[:tel2].nil?
 
   		student.save
   	end
+  end
+
+  def self.parse_date(date_raw)
+    month, day, year = date_raw.split('/').map {|x| x.to_i}
+    year += 1900 if year > 50 else 2000
+    Date.new year, month, day
   end
 end

@@ -7,7 +7,7 @@
 					<li><%= link_to "View counselor accounts", users_path %></li>
 					<li><%= link_to "View student profiles", students_path %></li>
 				<% end -%>
-				<li><a href="editweekly.html" title="assign counselors to respective students/sections">Edit weekly plan</a></li>
+				<li><%= link_to "Edit weekly plan", edit_schedule_entry_path(1) %></li>
 				<li><a href="conductcounseling.html" title="assign counselors to respective students/sections">Conduct counseling</a></li>
 			<% else %>
 				<li><%= link_to "Upload CSV file", :action => "upload",  :controller => "csv" %></li>

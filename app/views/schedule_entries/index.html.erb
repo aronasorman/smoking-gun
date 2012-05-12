@@ -1,21 +1,74 @@
-<h1>Listing schedule_entries</h1>
+<div id="sched">
+					<table>
+						<tr id="headname">
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+						</tr>
+						<% @grouped_periods.each do |period_group| %>
+							<tr>
+								<% period_group.each do |period| %>
+									<% entry = period.schedule_entries.find {|entry| entry.user == current_user } %>
+									<td>
+										<% unless entry.nil? %>
+											<% student = entry.student %>	
+											<%= [student.first_name, student.last_name].join ' ' %>
+											<br/>
+											<%= entry.interview_type.name %>
+										<% end -%>
+									</td>
+								<% end -%>
+							</tr>
+						<% end -%>
+					</table>
+				</div>
+				
+				<div id="summary">
+					<table>
+						<tr>
+							<td>Summary:</td>
+						</tr>
+						<tr> 
+							<td>
+								Counseling:
+								<li>Routine:</li>
+								<li>Follow-up:</li>
+								<li>Group:</li>
+							</td>
+							
+							<td>
+								Conferences:
+								<li>Moderator:</li>
+								<li>Teacher:</li>
+								<li>Parent:</li>
+							</td>
+						</tr>
+						
+						<tr>
+							
+							<td colspan="2">
+								Recommendations:<br/>
+								<textarea name="recommendations" ></textarea><br/>
+								<input type="button" name="recommendationbutton" value="submit">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								Meetings:<br/>
+								<textarea name="meetings"></textarea><br/>
+								<input type="button" name="meetingbutton" value="submit">
+							</td>
+						</tr>
+						<tr>													
+							<td colspan="2">
+								Others:<br/>
+								<textarea name="others"></textarea><br/>
+								<input type="button" name="otherbutton" value="submit">
+							</td>
+						</tr>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @schedule_entries.each do |schedule_entry| %>
-  <tr>
-    <td><%= link_to 'Show', schedule_entry %></td>
-    <td><%= link_to 'Edit', edit_schedule_entry_path(schedule_entry) %></td>
-    <td><%= link_to 'Destroy', schedule_entry, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Schedule entry', new_schedule_entry_path %>
+					</table>
+					<input type="button" value="print">
+				</div>

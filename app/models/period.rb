@@ -3,6 +3,7 @@ class Period < ActiveRecord::Base
 
   has_many :entries
   has_many :interviews
+  has_many :schedule_entries
 
   def self.per_day 
   	16

@@ -3,12 +3,6 @@ class PeriodsController < ApplicationController
   # GET /periods
   # GET /periods.json
   def index
-    @periods = Period.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @periods }
-    end
   end
 
   # GET /periods/1

@@ -1,6 +1,68 @@
-<h1>Editing schedule_entry</h1>
+<div id="sched">
+					<table>
+						<tr id="headname">
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+						</tr>
+						<% @grouped_periods.each do |period_group| %>
+							<tr>
+								<% period_group.each do |period| %>
+									<td>
+										<%= link_to "schedule student", new_schedule_entry_path(:period_id => period.id) %>
+									</td>
+								<% end -%>
+							</tr>
+						<% end -%>
+					</table>
+				</div>
+				
+				<div id="summary">
+					<table>
+						<tr>
+							<td>Summary:</td>
+						</tr>
+						<tr> 
+							<td>
+								Counseling:
+								<li>Routine:</li>
+								<li>Follow-up:</li>
+								<li>Group:</li>
+							</td>
+							
+							<td>
+								Conferences:
+								<li>Moderator:</li>
+								<li>Teacher:</li>
+								<li>Parent:</li>
+							</td>
+						</tr>
+						
+						<tr>
+							
+							<td colspan="2">
+								Recommendations:<br/>
+								<textarea name="recommendations" ></textarea><br/>
+								<input type="button" name="recommendationbutton" value="submit">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								Meetings:<br/>
+								<textarea name="meetings"></textarea><br/>
+								<input type="button" name="meetingbutton" value="submit">
+							</td>
+						</tr>
+						<tr>													
+							<td colspan="2">
+								Others:<br/>
+								<textarea name="others"></textarea><br/>
+								<input type="button" name="otherbutton" value="submit">
+							</td>
+						</tr>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @schedule_entry %> |
-<%= link_to 'Back', schedule_entries_path %>
+					</table>
+					<input type="button" value="print">
+				</div>

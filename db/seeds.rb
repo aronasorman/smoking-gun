@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-nature_of_problems = NatureOfProblemType.create([{name: 'Followup Interview'}, {name: 'Routine Interview'}, {name: 'Other'}])
+InterviewType = InterviewType.create([{name: 'Followup Interview'}, {name: 'Routine Interview'}, {name: 'Other Interview'}])
 
 sections = []
 
@@ -18,7 +18,7 @@ end
 require 'Date'
 periods = []
 (-Period.num .. Period.num).each do |period_num|
-	date = period_num.day.from_now
+	date = period_num.day.from_now.to_date
 	Period.per_day.times do |day_num|
 		periods.append Period.create({date: date, num: day_num})
 	end

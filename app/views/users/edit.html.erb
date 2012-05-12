@@ -20,16 +20,6 @@
 				<tr>
 				<td><%= f.submit "submit" %></td>
 			</tr>
-
-			<% if current_user.role == 'Head Counselor' %>
-				<% @sections.each do |section| %>
-					<% if @user.sections.member? section %>
-						<%= check_box_tag 'section[]', section.name , {checked: true} %>	<%= section.name %>
-					<% else %>
-						<%= check_box_tag 'section[]', section.name %>	<%= section.name %>
-					<% end -%>
-				<% end -%>
-			<% end -%>
 			<% end -%>
 		</table>
 		</div>

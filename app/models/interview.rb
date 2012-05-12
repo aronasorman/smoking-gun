@@ -4,7 +4,7 @@ class Interview < ActiveRecord::Base
   belongs_to :interview_type
   belongs_to :period
   belongs_to :user
-  # belongs_to :student
+  belongs_to :student
 
   has_one :followup_interview
 

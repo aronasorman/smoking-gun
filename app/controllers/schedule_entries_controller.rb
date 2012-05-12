@@ -4,11 +4,17 @@ class ScheduleEntriesController < ApplicationController
   # GET /schedule_entries.json
   def index
     @schedule_entries = ScheduleEntry.all
+    current_date = Date.today
+    monday = current_date.monday
+    dates_this_week = [monday, monday.next, monday.next.next, monday.next.next.next, monday.next.next.next.next]
+    @grouped_periods = Period.where(:date => dates_this_week).group_by {|period| period.num}.values
+  end
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @schedule_entries }
-    end
+  def edit
+    current_date = Date.today
+    monday = current_date.monday
+    dates_this_week = [monday, monday.next, monday.next.next, monday.next.next.next, monday.next.next.next.next]
+    @grouped_periods = Period.where(:date => dates_this_week).group_by {|period| period.num}.values
   end
 
   # GET /schedule_entries/1
@@ -33,9 +39,9 @@ class ScheduleEntriesController < ApplicationController
   end
 
   # GET /schedule_entries/1/edit
-  def edit
-    @schedule_entry = ScheduleEntry.find(params[:id])
-  end
+  # def edit
+  #   @schedule_entry = ScheduleEntry.find(params[:id])
+  # end
 
   # POST /schedule_entries
   # POST /schedule_entries.json

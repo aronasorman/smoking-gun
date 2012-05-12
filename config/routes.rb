@@ -1,5 +1,5 @@
 GuidanceRails::Application.routes.draw do
-  get "periods/editweekly"
+  get "schedule_entries/editweekly"
 
   get "users/sectionedit"
 
@@ -89,7 +89,7 @@ GuidanceRails::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   devise_scope :user do
-    root :to => 'periods#index'
+    root :to => 'schedule_entries#index'
   end
 
   # See how all your routes lay out with "rake routes"

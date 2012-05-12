@@ -10,7 +10,15 @@
 						<% @grouped_periods.each do |period_group| %>
 							<tr>
 								<% period_group.each do |period| %>
-									<td>TODO: check if there is someone scheduled in here</td>
+									<% entry = period.schedule_entries.find {|entry| entry.user == current_user } %>
+									<td>
+										<% unless entry.nil? %>
+											<% student = entry.student %>	
+											<%= [student.first_name, student.last_name].join ' ' %>
+											<br/>
+											<%= entry.interview_type.name %>
+										<% end -%>
+									</td>
 								<% end -%>
 							</tr>
 						<% end -%>

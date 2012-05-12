@@ -9,6 +9,13 @@ class PeriodsController < ApplicationController
     @grouped_periods = Period.where(:date => dates_this_week).group_by {|period| period.num}.values
   end
 
+  def editweekly
+    current_date = Date.today
+    monday = current_date.monday
+    dates_this_week = [monday, monday.next, monday.next.next, monday.next.next.next, monday.next.next.next.next]
+    @grouped_periods = Period.where(:date => dates_this_week).group_by {|period| period.num}.values
+  end
+
   # GET /periods/1
   # GET /periods/1.json
   def show

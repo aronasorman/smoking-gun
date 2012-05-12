@@ -1,24 +1,38 @@
-<div id="viewcounselor">
-
-<table>
-	<tr id="thead">
-		<td>Name</td>
-		<td>Year/Sections Assignments</td>
-	</tr>
-		<% @counselors.each do |counselor| %>
-			<tr>
-				<td><%= link_to counselor.name, counselor %></td>
-				<td>
-					<ul>
-						<% counselor.sections.each do |section| %>
-							<li><%= link_to section.name, section %></li>
-						<% end -%>
-					</ul>
-				</td>
-		</tr>
-	<% end -%>
-	
-	
-</table>
-
-</div>
+<div id="title">
+				<a href="mainpage.html">Home </a>
+				<span id="arrow"> > </span>
+				<a href="viewcounselor.html"> View Counselor Accounts</a>
+			</div>
+			
+			
+		<!-- the only area you can edit-->
+		
+			<div id="viewcounselor">
+			
+			<table>
+				<tr id="thead">
+					<td>Name</td>
+					<td>Year/Sections Assignments</td>
+				</tr>
+					<% @counselors.each do |counselor| %>
+						<tr>
+							<td><%= link_to counselor.name, counselor %></td>
+							<td>
+								<ul>
+									<% counselor.sections.each do |section| %>
+										<li><%= link_to section.name, section %></li>
+									<% end -%>
+								</ul>
+							</td>
+					</tr>
+				<% end -%>
+				
+				
+			</table>
+			
+			</div>
+			
+					
+		<!-- the only area you can edit-->
+				
+		<br style="clear:both" /> 

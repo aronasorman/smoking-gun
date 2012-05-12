@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120510081802) do
+ActiveRecord::Schema.define(:version => 20120512190357) do
 
   create_table "followup_interviews", :force => true do |t|
     t.string   "comments"
@@ -42,8 +42,12 @@ ActiveRecord::Schema.define(:version => 20120510081802) do
   end
 
   create_table "interviews", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "interview_type_id"
+    t.integer  "period_id"
+    t.integer  "user_id"
+    t.integer  "student_id"
   end
 
   create_table "nature_of_problem_types", :force => true do |t|
@@ -60,8 +64,12 @@ ActiveRecord::Schema.define(:version => 20120510081802) do
   end
 
   create_table "schedule_entries", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "interview_type_id"
+    t.integer  "period_id"
+    t.integer  "user_id"
+    t.integer  "student_id"
   end
 
   create_table "sections", :force => true do |t|

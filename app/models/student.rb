@@ -6,6 +6,8 @@ class Student < ActiveRecord::Base
   belongs_to :section
 
   has_many :guardians
+  has_many :interviews
+  has_many :schedule_entries
 
   def self.import(file)
     require 'Date'

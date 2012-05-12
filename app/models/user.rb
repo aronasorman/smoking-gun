@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   attr_accessible :name, :role, :is_head_counselor, :is_counselor, :is_secretary
 
   has_many :sections
+  has_many :interviews
+  has_many :schedule_entries
 
   accepts_nested_attributes_for :sections
 

@@ -1,7 +1,83 @@
-    <div id="viewstudent">
-        <%= paginate @students %>
-    
-    <table>
+<div id="title">
+				<a href="mainpage.html">Home </a>
+				<span id="arrow"> > </span>
+				<a href="viewstudent.html"> View Student Profiles</a>
+			</div>
+			
+			
+		<!-- the only area you can edit-->
+		
+			<div id="query">
+			
+			<table>
+				<tr>
+					<td class="label">Search Student:</td>
+					<td>
+						<input type="text" size="40" name="searchbar" id="searchbar">
+						<input type="button" value="search" name="searchbutt" id="searchbutt">
+					</td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td><span id="directions">Input name, year/section or id number*</span></td>
+				</tr>
+				
+				<tr>
+				</tr>
+				
+				<tr>
+					<td class="label">Name:</td>
+					<td>
+						<ul>
+							<li><a href="#">A</a></li>
+							<li><a href="#">B</a></li>
+							<li><a href="#">C</a></li>
+							<li><a href="#">D</a></li>
+							<li><a href="#">E</a></li>
+							<li>...</li>
+						</ul>
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="label">Year:</td>
+					<td>
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+						</ul>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="label">Page:</td>
+					<td>
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li>...</li>
+						</ul>
+					</td>
+				</tr>
+				
+			</table>
+			<%= paginate @students %>
+			</div>
+		
+			<div id="viewstudent">
+				
+				
+				
+			<table>
         <tr id="thead">
             <td>Name</td>
             <td>ID No.</td>
@@ -24,11 +100,9 @@
             </tr>
         <% end -%>
    </table>
-    </div>
-    
-            
-<!-- the only area you can edit-->
-        
-<br style="clear:both" /> 
-    
-</div> 
+			</div>
+			
+					
+		<!-- the only area you can edit-->
+				
+		<br style="clear:both" /> 

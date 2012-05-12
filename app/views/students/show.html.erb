@@ -1,19 +1,30 @@
-    <!-- the only area you can edit-->
-    
-      <div id="counseloraccount">
-        
-        <div id="counselornav">
-          <ul>
-            <li><a href="studentprofile.html">Personal Information</a></li>
-            <li><a href="informationaboutfamily.html">Information About Family</a></li>
-            <li><a href="acad.html">Academic History</a></li>
-            <li><a href="counselor_notations.html">Notations</a></li>
-          </ul>
-        </div>
-        
-        <!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->
-        
-        <div id="profile">
+<div id="title">
+				<a href="viewstudent.html">View Student Accounts </a>
+				<span id="arrow"> > </span>
+				<a href="studentprofile.html"> Student Profile</a>
+				<br/>
+				<span id="student">Aron Fyodor Asor</span>
+			</div>
+			
+			
+		<!-- the only area you can edit-->
+		
+			<div id="counseloraccount">
+				
+				<div id="counselornav">
+					<ul>
+						<li><a href="studentprofile.html">Personal Information</a></li>
+						<li><a href="informationaboutfamily.html">Information About Family</a></li>
+						<li><a href="acad.html">Academic History</a></li>
+						<li><a href="routine_int.html">Routine Interviews</a></li>
+						<li><a href="counselor_notations.html">Counselor Notations</a></li>
+					</ul>
+				</div>
+				
+				<!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->
+				
+				<div id="profile">
+				<%= link_to 'Edit', edit_student_path(@student) %>
           <div id="graypart">
           <table>
             <tr>
@@ -83,17 +94,13 @@
               </td>
             </tr>
           </table>
-          <br/>
-          <%= link_to 'Edit', edit_student_path(@student) %>
           </div>
-        </div>        
-        <!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->
-        
-      </div>
-      
-          
-    <!-- the only area you can edit-->
-        
-    <br style="clear:both" /> 
-
-<%= link_to 'Back', students_path %>
+        </div>
+				<!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->
+				
+			</div>
+			
+					
+		<!-- the only area you can edit-->
+				
+		<br style="clear:both" /> 

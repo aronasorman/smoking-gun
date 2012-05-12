@@ -1,15 +1,48 @@
-<h2>Change your password</h2>
+<div id="title">
+				<a href="mainpage.html">Home </a>
+				<span id="arrow"> > </span>
+				<a href="changepass.html"> Change Password</a>
+			</div>
+			
+			
+		<!--le only area you can edit-->
+		
+			<div id="changepass">
+				<table>
+		
+					<tr>
+						<td colspan=2><span id="cp">Change Your Password</span></td>
+					</tr>
+					
+					<tr>
+						<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+						  <%= devise_error_messages! %>
+						  <%= f.hidden_field :reset_password_token %>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+						  <div><%= f.label :password, "New password" %><br />
+						  <%= f.password_field :password %></div>
 
-  <div><%= f.label :password, "New password" %><br />
-  <%= f.password_field :password %></div>
+						  <div><%= f.label :password_confirmation, "Confirm new password" %><br />
+						  <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :password_confirmation, "Confirm new password" %><br />
-  <%= f.password_field :password_confirmation %></div>
+						  <div><%= f.submit "Change my password" %></div>
+						<% end %>
+					</tr>
+					
+					
+					
+				</table>
 
-  <div><%= f.submit "Change my password" %></div>
-<% end %>
-
+				<br/>
+				<span id="reminders">*Reminders</span>
+				
+				<ol>				
+					<li>Password must be atleast 7 characters long</li>
+					<li>Only numbers and letters are allowed (no special characters or spaces)</li>
+				</ol>
+			</div>
+	
+			
+		<!--le only area you can edit-->
+				
+		<br style="clear:both" /> 

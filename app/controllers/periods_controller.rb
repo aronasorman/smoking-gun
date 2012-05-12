@@ -3,12 +3,10 @@ class PeriodsController < ApplicationController
   # GET /periods
   # GET /periods.json
   def index
-    @periods = Period.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @periods }
-    end
+    current_date = Date.today
+    monday = current_date.monday
+    dates_this_week = [monday, monday.next, monday.next.next, monday.next.next.next, monday.next.next.next.next]
+    @grouped_periods = Period.where(:date => dates_this_week).group_by {|period| period.num}.values
   end
 
   # GET /periods/1

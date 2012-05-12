@@ -1,12 +1,66 @@
-<table>
-  <tr>
-    <th>Num</th>
-    <th>Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="sched">
+					<table>
+						<tr id="headname">
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+						</tr>
+						<% @grouped_periods.each do |period_group| %>
+							<tr>
+								<% period_group.each do |period| %>
+									<td><%= link_to "Add Student", edit_period_path(period) %></td>
+								<% end -%>
+							</tr>
+						<% end -%>
+					</table>
+				</div>
+				
+				<div id="summary">
+					<table>
+						<tr>
+							<td>Summary:</td>
+						</tr>
+						<tr> 
+							<td>
+								Counseling:
+								<li>Routine:</li>
+								<li>Follow-up:</li>
+								<li>Group:</li>
+							</td>
+							
+							<td>
+								Conferences:
+								<li>Moderator:</li>
+								<li>Teacher:</li>
+								<li>Parent:</li>
+							</td>
+						</tr>
+						
+						<tr>
+							
+							<td colspan="2">
+								Recommendations:<br/>
+								<textarea name="recommendations" ></textarea><br/>
+								<input type="button" name="recommendationbutton" value="submit">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								Meetings:<br/>
+								<textarea name="meetings"></textarea><br/>
+								<input type="button" name="meetingbutton" value="submit">
+							</td>
+						</tr>
+						<tr>													
+							<td colspan="2">
+								Others:<br/>
+								<textarea name="others"></textarea><br/>
+								<input type="button" name="otherbutton" value="submit">
+							</td>
+						</tr>
 
-</table>
-
-<br />
+					</table>
+					<input type="button" value="print">
+				</div>

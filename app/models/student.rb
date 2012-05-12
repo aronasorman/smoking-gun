@@ -12,28 +12,28 @@ class Student < ActiveRecord::Base
   def self.import(file)
     require 'Date'
   	data = file.read
-  	CSV.parse(data, :headers => true, :encoding => "r:ISO8859-1", :header_converters => :symbol).each do |row|
+  	CSV.parse(data.gsub(150.chr, 'n'), :headers => true, :encoding => "r:ISO8859-1", :header_converters => :symbol).each do |row|
   		id = row[:studno].gsub('-', '').to_i # remove the dash
   		student = Student.find_or_create_by_student_id(id)
 
       section = row[:clno][0..1]
       student.section = Section.find_by_name(section) 
-      student.first_name = row[:fname].gsub(150.chr, '') # we do these gsubs so that the blasted \x96 char will be eliminated
-      student.middle_name = row[:mname].gsub(150.chr, '') unless row[:mname].nil? # apparently there are people without middle names
-      student.last_name = row[:lname].gsub(150.chr, '')
+      student.first_name = row[:fname]
+      student.middle_name = row[:mname]
+      student.last_name = row[:lname]
 
-      student.birthplace = row[:placeofbirth].gsub(150.chr, '') unless row[:placeofbirth].nil?
+      student.birthplace = row[:placeofbirth]
       student.birthdate = Student.parse_date row[:dateofbirth]
-      student.telno = row[:tel1].gsub(150.chr, '') unless row[:tel1].nil?
-      student.celno = row[:tel2].gsub(150.chr, '') unless row[:tel2].nil?
+      student.telno = row[:tel1]
+      student.celno = row[:tel2]
       student.grade_school = row[:gs_name]
 
       father = Guardian.new
-      father_last_name = row[:pa_lname].gsub(150.chr, '') unless row[:pa_lname].nil?
-      father_first_name = row[:pa_fname].gsub(150.chr, '') unless row[:pa_fname].nil?
+      father_last_name = row[:pa_lname]
+      father_first_name = row[:pa_fname]
       father.name = [father_last_name, father_first_name].join ' '
       father.occupation = row[:pa_occu]
-      father.work_address = row[:pa_office_add] unless row[:pa_office_add].nil?
+      father.work_address = row[:pa_office_add]
 
       student.guardians = [father]
   		student.save

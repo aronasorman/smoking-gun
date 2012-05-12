@@ -114,6 +114,12 @@ text-decoration: underline;
 color: red;
 }
 
+#pages {
+font-family: "Century Gothic";
+font-size: 11pt;
+color: #012b5d;
+}
+
 /*editweekly, conductcounseling
 ***************/
 #details{

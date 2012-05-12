@@ -1,0 +1,22 @@
+<div id="sectionchoices">
+	<% if current_user.role == 'Head Counselor' %>
+    <%= form_for @user do |f| %>
+			<table>
+				<% @sections_partitioned_by_year.each do |sections| %>
+					<tr>
+					<% sections.each do |section| %>
+						<td>
+						<% if @user.sections.member? section %>
+							<%= check_box_tag 'section[]', section.name , {checked: true} %>	<%= section.name %>
+						<% else %>
+							<%= check_box_tag 'section[]', section.name %>	<%= section.name %>
+						<% end -%>
+						</td>
+					<% end -%>
+  				</tr>
+				<% end -%>
+			</table>
+		<%= f.submit "Submit section list" %>
+		<% end -%>
+	<% end -%>
+</div>

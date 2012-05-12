@@ -10,7 +10,7 @@ class Student < ActiveRecord::Base
   def self.import(file)
     require 'Date'
   	data = file.read
-  	CSV.parse(data, :headers => true, :encoding => "UTF-8", :header_converters => :symbol).each do |row|
+  	CSV.parse(data, :headers => true, :encoding => "r:ISO8859-1", :header_converters => :symbol).each do |row|
   		id = row[:studno].gsub('-', '').to_i # remove the dash
   		student = Student.find_or_create_by_student_id(id)
 
@@ -26,6 +26,14 @@ class Student < ActiveRecord::Base
       student.celno = row[:tel2].gsub(150.chr, '') unless row[:tel2].nil?
       student.grade_school = row[:gs_name]
 
+      father = Guardian.new
+      father_last_name = row[:pa_lname].gsub(150.chr, '') unless row[:pa_lname].nil?
+      father_first_name = row[:pa_fname].gsub(150.chr, '') unless row[:pa_fname].nil?
+      father.name = [father_last_name, father_first_name].join ' '
+      father.occupation = row[:pa_occu]
+      father.work_address = row[:pa_office_add] unless row[:pa_office_add].nil?
+
+      student.guardians = [father]
   		student.save
   	end
   end

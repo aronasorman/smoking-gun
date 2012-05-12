@@ -1,4 +1,6 @@
 GuidanceRails::Application.routes.draw do
+  get "users/sectionedit"
+
   get "csv/upload"
 
   post "csv/update"

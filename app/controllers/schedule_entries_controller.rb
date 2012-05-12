@@ -1,4 +1,5 @@
 class ScheduleEntriesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /schedule_entries
   # GET /schedule_entries.json
   def index
@@ -25,11 +26,10 @@ class ScheduleEntriesController < ApplicationController
   # GET /schedule_entries/new.json
   def new
     @schedule_entry = ScheduleEntry.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @schedule_entry }
-    end
+    handled_sections_id = current_user.sections.map {|section| section.id}
+    @students = Student.where(:section_id => handled_sections_id).page(params[:page])
+    @interview_types = InterviewType.all
+    @period = Period.find(params[:period_id])
   end
 
   # GET /schedule_entries/1/edit

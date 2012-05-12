@@ -3,7 +3,7 @@
 				<span id="arrow"> > </span>
 				<a href="counseloraccount.html"> Counselor Account</a>
 				<br/>
-				<span id="counselor">Juan Dela Cruz</span>
+				<span id="counselor"><%= @user.name %></span>
 			</div>
 			
 			
@@ -25,32 +25,32 @@
 				<!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->
 				
 				<div id="profile">
-	<div id="graypart">
-	<table>
-		<tr>
-			<td id="profhead" colspan="2">
-				<ul id="head_bitch">
-					<% if @user == current_user || current_user.role == 'Head Counselor' %>
-					 <li><%= link_to "Edit Profile", edit_user_path(@user) %></li>
-					<% end -%>
-					<% if current_user.role == 'Head Counselor' %>
-					 <li><%= link_to "Edit Sections", edit_user_path(@user) %></li>
-				 <% end -%>
-				</ul>
-			</td>
-		</tr>
-		<tr>
-			<td>Name:</td>
-			<td><%= @user.name %>
-			</td>
-		</tr>
-		<tr>
-			<td>E-mail Address:</td>
-			<td><%= @user.email %></td>
-		</tr>
-	</table>
-	</div>
-</div>
+					<div id="graypart">
+					<table>
+						<tr>
+							<td id="profhead" colspan="2">
+								
+									<% if @user == current_user || current_user.role == 'Head Counselor' %>
+									 <li><%= link_to "Edit Profile", edit_user_path(@user) %></li>
+									<% else -%>
+									
+									 <li><%= link_to "Edit Sections", edit_user_path(@user) %></li>
+								 <% end -%>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>Name:</td>
+							<td><%= @user.name %>
+							</td>
+						</tr>
+						<tr>
+							<td>E-mail Address:</td>
+							<td><%= @user.email %></td>
+						</tr>
+					</table>
+					</div>
+				</div>
 
 				
 				<!--EDIT FROM HERE ONLY FOR COUNSELOR ACCOUNT-->

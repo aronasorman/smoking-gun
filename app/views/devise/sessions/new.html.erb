@@ -15,7 +15,8 @@
 						<tr><td colspan="2">
 							<%= devise_error_messages! %>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-	  <div> Username
+	  <%= devise_error_messages! %>
+	  <div> ID number
 	  <%= f.text_field :username %></div>
 	  <br/>
 

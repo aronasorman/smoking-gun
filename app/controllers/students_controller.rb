@@ -1,8 +1,10 @@
 class StudentsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /students
   # GET /students.json
   def index
-    @students = Student.all
+    sections_handled = current_user.sections.map! {|section| section.id }
+    @students = Student.where( :section_id => sections_handled).page(params[:page]).per(15)
 
     respond_to do |format|
       format.html # index.html.erb

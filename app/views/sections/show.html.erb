@@ -1,15 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Year:</b>
-  <%= @section.year %>
-</p>
-
-<p>
-  <b>Name:</b>
+  <b>name:</b>
   <%= @section.name %>
 </p>
+<p>
+  <b>counselor:</b>
+  <% counselor = @section.user %>
+  <% if counselor.nil? %>
+  	No counselor assigned
+	<% else %>
+		<%= counselor.name %>
+	<% end -%>
+</p>
+    <div id="viewstudent">
+    
+    <table>
+        <tr id="thead">
+            <td>Name</td>
+            <td>ID No.</td>
+        </tr>
+        <% @students.each do |student| %>
+            <tr>
+                <% student_name = [student.first_name, student.last_name].join ' ' %>
+                <td><%= link_to student_name, student %></td>
+                <td><%= student.student_id %></td>
+            </tr>
+        <% end -%>
+   </table>
+    </div>
 
 
-<%= link_to 'Edit', edit_section_path(@section) %> |
-<%= link_to 'Back', sections_path %>

@@ -11,13 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120508090946) do
+ActiveRecord::Schema.define(:version => 20120510081802) do
 
   create_table "followup_interviews", :force => true do |t|
     t.string   "comments"
     t.string   "planned_intervention"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+  end
+
+  create_table "guardians", :force => true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.integer  "age"
+    t.string   "occupation"
+    t.string   "work_address"
+    t.string   "telno"
+    t.string   "celno"
+    t.string   "email"
+    t.string   "religion"
+    t.integer  "student_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "interview_types", :force => true do |t|
@@ -57,7 +72,7 @@ ActiveRecord::Schema.define(:version => 20120508090946) do
   end
 
   create_table "students", :force => true do |t|
-    t.text     "picture"
+    t.binary   "picture"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "middle_name"
@@ -79,6 +94,10 @@ ActiveRecord::Schema.define(:version => 20120508090946) do
     t.text     "interests"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
+    t.integer  "student_id"
+    t.string   "religion"
+    t.string   "citizenship"
+    t.string   "grade_school"
   end
 
   create_table "users", :force => true do |t|
@@ -94,6 +113,7 @@ ActiveRecord::Schema.define(:version => 20120508090946) do
     t.string   "last_sign_in_ip"
     t.string   "password_salt"
     t.string   "name"
+    t.integer  "user_id"
     t.boolean  "is_head_counselor"
     t.boolean  "is_counselor"
     t.boolean  "is_secretary"

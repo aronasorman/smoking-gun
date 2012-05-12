@@ -1,0 +1,5 @@
+<%= form_tag "/csv/update", :method => "post", :multipart => true do %>
+	<%= file_field_tag "csv" %>
+	<br/>
+	<%= submit_tag  "upload" %>
+<% end -%>

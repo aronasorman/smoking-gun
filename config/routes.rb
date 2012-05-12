@@ -1,4 +1,8 @@
 GuidanceRails::Application.routes.draw do
+  get "csv/upload"
+
+  post "csv/update"
+
   resources :students
 
   get "users/edit"

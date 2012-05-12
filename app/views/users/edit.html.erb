@@ -23,8 +23,11 @@
 
 			<% if current_user.role == 'Head Counselor' %>
 				<% @sections.each do |section| %>
-					<% section_name = (section.year.to_s + section.name) %>
-					<%= check_box_tag 'section[]', section_name %>	<%= section_name %>
+					<% if @user.sections.member? section %>
+						<%= check_box_tag 'section[]', section.name , {checked: true} %>	<%= section.name %>
+					<% else %>
+						<%= check_box_tag 'section[]', section.name %>	<%= section.name %>
+					<% end -%>
 				<% end -%>
 			<% end -%>
 			<% end -%>

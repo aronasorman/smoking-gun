@@ -1,4 +1,5 @@
     <div id="viewstudent">
+        <%= paginate @students %>
     
     <table>
         <tr id="thead">
@@ -9,13 +10,17 @@
         </tr>
         <% @students.each do |student| %>
             <tr>
-                <% student_name = student.first_name + student.last_name %>
+                <% student_name = [student.first_name, student.last_name].join ' ' %>
                 <% section = student.section %>
-                <% counselor = section.counselor %>
+                <% counselor = section.user %>
                 <td><%= link_to student_name, student %></td>
-                <td><%= student.id %></td>
+                <td><%= student.student_id %></td>
                 <td><%= link_to section.name, section %></td>
-                <td><%= link_to counselor.name,  counselor %></td>
+                <% if counselor.nil? %>
+                    <td>No counselor assigned</td>
+                <% else %>
+                    <td><%= link_to counselor.name,  counselor %></td>
+                <% end -%>
             </tr>
         <% end -%>
    </table>

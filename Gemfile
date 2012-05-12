@@ -10,6 +10,12 @@ gem 'sqlite3'
 # login
 gem 'devise'
 
+# for csv parsing
+gem 'fastercsv'
+
+# for pagination
+gem 'kaminari'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

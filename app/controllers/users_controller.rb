@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 	
   def index
   	@counselors = User.all.find_all { |user| user.role == 'Counselor' || user.role == 'Head Counselor' }
-  end
+end
 
   def show
   	@user = User.find(params[:id])
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    available_sections = Section.where(:user_id == nil)
-    @sections = @user.sections + available_sections
+    @available_sections = Section.where(:user_id == nil)
+    @sections = (@user.sections + @available_sections).uniq!.sort!
   end
 end

@@ -1,11 +1,16 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>name:</b>
-  <%= @section.name %>
-</p>
-<p>
-  <b>counselor:</b>
+<div id="title">
+				<a href="mainpage.html">Section </a>
+				<span id="arrow"> > </span>
+				<a href="viewstudent.html"> <%= @section.name %></a>
+			</div>
+			
+			
+		<!-- the only area you can edit-->
+		
+			<div id="viewstudent">
+				<p>
+  <b>Counselor:</b>
   <% counselor = @section.user %>
   <% if counselor.nil? %>
   	No counselor assigned
@@ -13,21 +18,22 @@
 		<%= counselor.name %>
 	<% end -%>
 </p>
-    <div id="viewstudent">
-    
-    <table>
-        <tr id="thead">
-            <td>Name</td>
-            <td>ID No.</td>
-        </tr>
-        <% @students.each do |student| %>
-            <tr>
-                <% student_name = [student.first_name, student.last_name].join ' ' %>
-                <td><%= link_to student_name, student %></td>
-                <td><%= student.student_id %></td>
-            </tr>
-        <% end -%>
-   </table>
-    </div>
-
-
+			<table>
+				<tr id="thead">
+					<td>Name</td>
+					<td>ID No.</td>
+				</tr>
+				<% @students.each do |student| %>
+					<tr>
+						<% student_name = [student.first_name, student.last_name].join ' ' %>
+						<td><%= link_to student_name, student %></td>
+						<td><%= student.student_id %></td>
+					</tr>
+				<% end -%>
+		   </table>
+			</div>
+			
+					
+		<!-- the only area you can edit-->
+				
+		<br style="clear:both" /> 

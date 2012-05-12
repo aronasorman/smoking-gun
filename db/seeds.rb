@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-nature_of_problems = NatureOfProblemType.create([{name: 'Followup Interview'}, {name: 'Routine Interview'}, {name: 'Other'}])
+InterviewType = InterviewType.create([{name: 'Followup Interview'}, {name: 'Routine Interview'}, {name: 'Other'}])
 
 sections = []
 

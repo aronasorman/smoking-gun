@@ -1,4 +1,6 @@
 GuidanceRails::Application.routes.draw do
+  get "periods/editweekly"
+
   get "users/sectionedit"
 
   get "csv/upload"

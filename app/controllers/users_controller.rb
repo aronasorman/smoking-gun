@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   def sectionedit
     @user = User.find(params[:id])
     @available_sections = Section.where(:user_id == nil)
-    @sections = (@user.sections + @available_sections).uniq!.sort!
+    @sections = (@user.sections + @available_sections).uniq.sort
     @sections_partitioned_by_year = (1..4).map do |year|
       @sections.partition {|section| section.name.first == year.to_s}.first
     end

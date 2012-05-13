@@ -7,5 +7,7 @@ class Interview < ActiveRecord::Base
   belongs_to :student
 
   has_one :followup_interview
+  has_one :routine_interview
+  has_one :other_interview
 
 end

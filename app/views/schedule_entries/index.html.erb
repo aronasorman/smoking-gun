@@ -11,12 +11,25 @@
 							<tr>
 								<% period_group.each do |period| %>
 									<% entry = period.schedule_entries.find {|entry| entry.user == current_user } %>
+									<% interview = period.interviews.find {|interview| interview.user == current_user} %>
 									<td>
 										<% unless entry.nil? %>
 											<% student = entry.student %>	
 											<%= [student.first_name, student.last_name].join ' ' %>
 											<br/>
 											<%= entry.interview_type.name %>
+											<% if interview.nil? %>
+												<br/>
+												<br/>
+												<% case entry.interview_type.name %>
+												<% when 'Followup Interview' %>
+													<%= button_to "Conduct Interview", new_followup_interview_path(:schedule_entry_id => entry.id), :method => :get %>
+												<% when 'Routine Interview' %>
+													<%= button_to "Conduct Interview", new_routine_interview_path(:schedule_entry_id => entry.id), :method => :get %>	
+												<% when 'Other Interview' %>
+													<%= button_to "Conduct Interview", new_other_interview_path(:schedule_entry_id => entry.id), :method => :get %>	
+												<% end -%>
+											<% end -%>
 										<% end -%>
 									</td>
 								<% end -%>

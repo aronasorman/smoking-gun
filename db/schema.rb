@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120512190357) do
+ActiveRecord::Schema.define(:version => 20120513174335) do
 
   create_table "followup_interviews", :force => true do |t|
     t.string   "comments"
     t.string   "planned_intervention"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.integer  "interview_id"
   end
 
   create_table "guardians", :force => true do |t|
@@ -56,11 +57,31 @@ ActiveRecord::Schema.define(:version => 20120512190357) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "other_interviews", :force => true do |t|
+    t.text     "content"
+    t.integer  "interview_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "periods", :force => true do |t|
     t.integer  "num"
     t.date     "date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "routine_interviews", :force => true do |t|
+    t.text     "general_mental_ability"
+    t.text     "academic_history"
+    t.integer  "interview_id"
+    t.text     "family_relationship"
+    t.text     "personal_emotional"
+    t.text     "peer_relationship"
+    t.text     "goals"
+    t.text     "recommendation"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
   end
 
   create_table "schedule_entries", :force => true do |t|

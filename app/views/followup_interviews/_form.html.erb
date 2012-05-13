@@ -13,12 +13,18 @@
 
   <div class="field">
     <%= f.label :comments %><br />
-    <%= f.text_field :comments %>
+    <%= f.text_area :comments, :cols => 50 %>
   </div>
   <div class="field">
     <%= f.label :planned_intervention %><br />
-    <%= f.text_field :planned_intervention %>
+    <%= f.text_area :planned_intervention, :cols => 50 %>
   </div>
+  <%= fields_for @interview do |ff| %>
+    <%= ff.hidden_field :user_id, :value => @interview.user_id %>
+    <%= ff.hidden_field :student_id, :value => @interview.student_id.to_s %>
+    <%= ff.hidden_field :period_id, :value => @interview.period_id %>
+    <%= ff.hidden_field :interview_type_id, :value => @interview.interview_type_id %>
+  <% end -%>
   <div class="actions">
     <%= f.submit %>
   </div>

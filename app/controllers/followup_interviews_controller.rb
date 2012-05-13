@@ -24,7 +24,13 @@ class FollowupInterviewsController < ApplicationController
   # GET /followup_interviews/new
   # GET /followup_interviews/new.json
   def new
+    @interview = Interview.new
     @followup_interview = FollowupInterview.new
+    schedule_entry = ScheduleEntry.find_by_id(params[:schedule_entry_id])
+    @interview.student_id = schedule_entry.student_id
+    @interview.period_id = schedule_entry.period_id
+    @interview.user_id = schedule_entry.user_id
+    @interview.interview_type_id = schedule_entry.interview_type_id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,12 +41,15 @@ class FollowupInterviewsController < ApplicationController
   # GET /followup_interviews/1/edit
   def edit
     @followup_interview = FollowupInterview.find(params[:id])
+    @interview = Interview.find_by_id(@followup_interview.interview_id)
   end
 
   # POST /followup_interviews
   # POST /followup_interviews.json
   def create
+    @interview = Interview.new(params[:interview])
     @followup_interview = FollowupInterview.new(params[:followup_interview])
+    @followup_interview.interview = @interview
 
     respond_to do |format|
       if @followup_interview.save
@@ -57,9 +66,10 @@ class FollowupInterviewsController < ApplicationController
   # PUT /followup_interviews/1.json
   def update
     @followup_interview = FollowupInterview.find(params[:id])
+    @interview = Interview.find(@followup_interview.interview_id)
 
     respond_to do |format|
-      if @followup_interview.update_attributes(params[:followup_interview])
+      if @followup_interview.update_attributes(params[:followup_interview]) && @interview.update_attributes(params[:interview])
         format.html { redirect_to @followup_interview, notice: 'Followup interview was successfully updated.' }
         format.json { head :no_content }
       else

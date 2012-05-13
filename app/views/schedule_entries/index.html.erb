@@ -23,11 +23,11 @@
 												<br/>
 												<% case entry.interview_type.name %>
 												<% when 'Followup Interview' %>
-													<%= button_to "Conduct Interview", new_followup_interview_path(:schedule_entry_id => entry.id), :method => :get %>
+													<%= link_to "Conduct Interview", new_followup_interview_path(:schedule_entry_id => entry.id) %>
 												<% when 'Routine Interview' %>
-													<%= button_to "Conduct Interview", new_routine_interview_path(:schedule_entry_id => entry.id), :method => :get %>	
+													<%= link_to "Conduct Interview", new_routine_interview_path(:schedule_entry_id => entry.id)  %>	
 												<% when 'Other Interview' %>
-													<%= button_to "Conduct Interview", new_other_interview_path(:schedule_entry_id => entry.id), :method => :get %>	
+													<%= link_to "Conduct Interview", new_other_interview_path(:schedule_entry_id => entry.id)  %>	
 												<% end -%>
 											<% end -%>
 										<% end -%>

@@ -14,7 +14,7 @@ class SectionsController < ApplicationController
   # GET /sections/1.json
   def show
     @section = Section.find(params[:id])
-    @students = Student.find_all_by_section_id(@section.id)
+    @students = Student.where(:section_id => @section.id).page(params[:page])
 
     respond_to do |format|
       format.html # show.html.erb

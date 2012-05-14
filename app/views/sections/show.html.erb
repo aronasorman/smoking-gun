@@ -9,7 +9,8 @@
 		<!-- the only area you can edit-->
 		
 			<div id="viewstudent">
-				<p>
+	<p>
+	<%= paginate @students %>
   <b>Counselor:</b>
   <% counselor = @section.user %>
   <% if counselor.nil? %>

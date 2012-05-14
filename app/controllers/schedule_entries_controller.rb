@@ -82,7 +82,7 @@ class ScheduleEntriesController < ApplicationController
     @schedule_entry.destroy
 
     respond_to do |format|
-      format.html { redirect_to schedule_entries_url }
+      format.html { redirect_to edit_schedule_entry_path(1) }
       format.json { head :no_content }
     end
   end

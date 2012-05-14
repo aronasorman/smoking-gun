@@ -8,7 +8,7 @@
 					 <li><%= link_to "Edit Profile", edit_user_path(@user) %></li>
 					<% end -%>
 					<% if current_user.role == 'Head Counselor' %>
-					 <li><%= link_to "Edit Sections", { :controller => "users", :action => "sectionedit", :id => current_user.id} %></li>
+					 <li><%= link_to "Edit Sections", { :controller => "users", :action => "sectionedit", :id => @user.id} %></li>
 				 <% end -%>
 				</ul>
 			</td>

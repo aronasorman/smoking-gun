@@ -5,8 +5,8 @@
 				<li><%= link_to "Change password", edit_user_password_path(current_user) %></li>
 				<% if current_user.role == 'Head Counselor' %>
 					<li><%= link_to "View counselor accounts", users_path %></li>
-					<li><%= link_to "View student profiles", students_path %></li>
 				<% end -%>
+				<li><%= link_to "View student profiles", students_path %></li>
 				<li><%= link_to "Edit weekly plan", edit_schedule_entry_path(1) %></li>
 			<% else %>
 				<li><%= link_to "Upload CSV file", :action => "upload",  :controller => "csv" %></li>

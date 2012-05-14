@@ -29,13 +29,31 @@ class Student < ActiveRecord::Base
       student.grade_school = row[:gs_name]
 
       father = Guardian.new
+      father.guardian_type = 'Father'
       father_last_name = row[:pa_lname]
       father_first_name = row[:pa_fname]
-      father.name = [father_last_name, father_first_name].join ' '
+      father_title = row[:pa_title]
+      father.name = [father_title, father_first_name, father_last_name].join ', '
       father.occupation = row[:pa_occu]
       father.work_address = row[:pa_office_add]
+      father.telno = row[:pa_telno]
+      father.email = row[:pa_email]
+      father.is_living = row[:living]
 
-      student.guardians = [father]
+      mother = Guardian.new
+      mother.guardian_type = 'Mother'
+      mother_last_name = row[:pa_lname]
+      mother_first_name = row[:pa_fname]
+      mother_title = row[:ma_title]
+      mother.name = [mother_title, mother_first_name, mother_last_name].join ', '
+      mother.occupation = row[:ma_occup]
+      mother.work_address = row[:ma_office_add]
+      mother.telno = row[:ma_tel]
+      mother.religion = row[:ma_relig]
+      mother.email = row[:ma_email]
+      mother.is_living = row[:ma_livi]
+
+      student.guardians = [father, mother]
   		student.save
   	end
   end

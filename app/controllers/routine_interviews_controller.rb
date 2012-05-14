@@ -14,6 +14,8 @@ class RoutineInterviewsController < ApplicationController
   # GET /routine_interviews/1.json
   def show
     @routine_interview = RoutineInterview.find(params[:id])
+    @student = @routine_interview.interview.student
+    @student_name = [@student.first_name, @student.last_name].join ' '
 
     respond_to do |format|
       format.html # show.html.erb

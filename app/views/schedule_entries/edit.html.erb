@@ -11,7 +11,24 @@
 							<tr>
 								<% period_group.each do |period| %>
 									<td>
-										<%= link_to "schedule student", new_schedule_entry_path(:period_id => period.id) %>
+										<% entry = period.schedule_entries.find {|entry| entry.user == current_user } %>
+										<% if entry.nil? %>
+											<%= link_to "schedule student", new_schedule_entry_path(:period_id => period.id) %>
+										<% else %>
+											<% student_name = [entry.student.first_name, entry.student.last_name].join ' ' %>
+											<%= link_to student_name, entry.student %>
+											<br/>
+											<%= entry.interview_type.name %>
+											<% interview = Interview.where(:user_id => entry.user_id, :period_id => entry.period_id, :student_id => entry.student_id).first %>
+											<% if interview.nil? %>
+												<br/>
+												<%= button_to "Remove", entry , {:confirm => "Are you sure?", :method => :delete} %>
+											<% else %>
+												<br/>
+												<br/>
+												Interview conducted!
+											<% end -%>
+										<% end -%>
 									</td>
 								<% end -%>
 							</tr>

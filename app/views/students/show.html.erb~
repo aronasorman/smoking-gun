@@ -35,9 +35,6 @@
               </td>
             </tr>
             <tr>
-            <td><%= image_tag @student.photo%></td>
-            </tr>
-            <tr>
               <td class="label1">Nickname:</td>
               <td><%= @student.nickname %></td>
             </tr>

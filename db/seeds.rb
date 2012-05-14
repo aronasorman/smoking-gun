@@ -17,7 +17,7 @@ sections = []
 	end
 end
 
-require 'Date'
+require 'date'
 periods = []
 (-Period.num .. Period.num).each do |period_num|
 	date = period_num.day.from_now.to_date

@@ -1,0 +1,28 @@
+<div id="profile">
+
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div>ID number<br/>
+      <%= f.number_field :username %></div>
+
+      <div><%= f.label :name%>
+      <%= f.text_field :name %></div>
+
+      <div><%= f.label :email %>
+      <%= f.email_field :email %></div>
+
+      <div><%= f.label :password %>
+      <%= f.password_field :password %></div>
+
+      <div><%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %></div>
+
+      <div>
+       	<%= f.radio_button :role, "Head Counselor" %> Head Counselor<br/>
+        <%= f.radio_button :role, "Counselor", :checked => true %>Counselor<br/> 
+        <%= f.radio_button :role, "Secretary" %>Secretary<br/> 
+      </div>
+      <div><%= f.submit "Sign up" %></div>
+    <% end %>
+</div>

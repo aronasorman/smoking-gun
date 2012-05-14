@@ -7,9 +7,6 @@ gem 'rails', '3.2.3'
 
 gem 'sqlite3'
 
-# for postgres
-gem 'pg'
-
 # login
 gem 'devise'
 
@@ -19,6 +16,9 @@ gem 'fastercsv'
 # for pagination
 gem 'kaminari'
 gem 'therubyracer'
+
+# for pics
+gem 'paperclip', :git =>"git://github.com/thoughtbot/paperclip.git"
 
 # Gems used only for assets and not required
 # in production environments by default.

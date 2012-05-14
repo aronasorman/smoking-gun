@@ -7,6 +7,9 @@ gem 'rails', '3.2.3'
 
 gem 'sqlite3'
 
+# for postgres
+gem 'pg'
+
 # login
 gem 'devise'
 

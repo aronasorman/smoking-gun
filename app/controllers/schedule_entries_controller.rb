@@ -50,7 +50,7 @@ class ScheduleEntriesController < ApplicationController
 
     respond_to do |format|
       if @schedule_entry.save
-        format.html { redirect_to @schedule_entry, notice: 'Schedule entry was successfully created.' }
+        format.html { redirect_to edit_schedule_entry_path(1), notice: 'Schedule entry was successfully created.' }
         format.json { render json: @schedule_entry, status: :created, location: @schedule_entry }
       else
         format.html { render action: "new" }

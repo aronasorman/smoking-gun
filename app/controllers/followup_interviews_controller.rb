@@ -25,6 +25,7 @@ class FollowupInterviewsController < ApplicationController
   # GET /followup_interviews/new.json
   def new
     @interview = Interview.new
+    @nature_of_problem_types = NatureOfProblemType.all
     @followup_interview = FollowupInterview.new
     schedule_entry = ScheduleEntry.find_by_id(params[:schedule_entry_id])
     @interview.student_id = schedule_entry.student_id

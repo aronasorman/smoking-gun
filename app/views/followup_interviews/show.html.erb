@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<br/>
+
+<p>
+	<b>Nature Of Problem:</b>
+	<%= @followup_interview.nature_of_problem_type.name %>
+</p>
+
 <p>
   <b>Comments:</b>
   <%= @followup_interview.comments %>
@@ -9,7 +16,4 @@
   <b>Planned intervention:</b>
   <%= @followup_interview.planned_intervention %>
 </p>
-
-
-<%= link_to 'Edit', edit_followup_interview_path(@followup_interview) %> |
-<%= link_to 'Back', followup_interviews_path %>
+<br style="clear:both" /> 

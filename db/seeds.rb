@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 InterviewType = InterviewType.create([{name: 'Followup Interview'}, {name: 'Routine Interview'}, {name: 'Other Interview'}])
 
+NatureOfProblemType.create!([{name: 'Family'}, {name: 'Academics'}, {name: 'Friends'}, {name: 'Others'}])
+
 sections = []
 
 [1, 2, 3, 4].each do |year|

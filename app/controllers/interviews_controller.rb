@@ -2,7 +2,8 @@ class InterviewsController < ApplicationController
   # GET /interviews
   # GET /interviews.json
   def index
-    @interviews = Interview.all
+    @student = Student.find(params[:student_id])
+    @interviews = @student.interviews
 
     respond_to do |format|
       format.html # index.html.erb

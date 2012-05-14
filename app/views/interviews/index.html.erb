@@ -1,21 +1,27 @@
-<h1>Listing interviews</h1>
+<div id="viewstudent">
+  <%= link_to "Back to profile", @student %>
+  <table>
+    <tr id="thead">
+      <td>Date</td>
+      <td>Interview Type</td>
+      <td>Counselor</td>
+    </tr>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <% @interviews.each do |interview| %>
+    <tr>
+      <% case interview.interview_type.name %>
+      <% when 'Followup Interview' %>
+        <td><%= link_to interview.period.date, interview.followup_interview %></td>
+      <% when 'Routine Interview' %>
+        <td><%= link_to interview.period.date, interview.routine_interview %></td>
+      <% when 'Other Interview' %>
+        <td><%= link_to interview.period.date, interview.other_interview %></td>
+      <% end -%>
+      <td><%= interview.interview_type.name %></td>
+      <td><%= interview.user.name %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
 
-<% @interviews.each do |interview| %>
-  <tr>
-    <td><%= link_to 'Show', interview %></td>
-    <td><%= link_to 'Edit', edit_interview_path(interview) %></td>
-    <td><%= link_to 'Destroy', interview, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Interview', new_interview_path %>
+<br style="clear:both" /> 

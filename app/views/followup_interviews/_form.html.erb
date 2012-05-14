@@ -10,7 +10,11 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :nature_of_problem_type_id %><br />
+    <%= f.collection_select :nature_of_problem_type_id, @nature_of_problem_types , :id, :name %>
+  </div>
+  <br/>
   <div class="field">
     <%= f.label :comments %><br />
     <%= f.text_area :comments, :cols => 50 %>
@@ -25,6 +29,7 @@
     <%= ff.hidden_field :period_id, :value => @interview.period_id %>
     <%= ff.hidden_field :interview_type_id, :value => @interview.interview_type_id %>
   <% end -%>
+  <br/>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -223,30 +223,34 @@ padding-left: 10px;
 
 /*query
 ***************/
-#query{
-float:left;
-clear: right;
-padding-top: 20px;
+.query{
+padding-top: 50px;
 padding-left: 20px;
 }
 
-#query table{
+.query table{
 width:700px;
 }
 
-#query td{
+.query td{
 
 }
-#query a{
+.query a{
 text-decoration: none;
 }
 
-#query ul{
+.query ul{
 list-style: none;
 }
 
-#query li{
+.query li{
 display: inline;
+}
+
+nav.pagination {
+	margin: auto auto;
+	text-align: center;
+	float: center;
 }
 
 #directions{

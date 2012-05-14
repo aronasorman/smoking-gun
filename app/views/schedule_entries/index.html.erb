@@ -18,9 +18,9 @@
 											<%= [student.first_name, student.last_name].join ' ' %>
 											<br/>
 											<%= entry.interview_type.name %>
+												<br/>
+												<br/>
 											<% if interview.nil? %>
-												<br/>
-												<br/>
 												<% case entry.interview_type.name %>
 												<% when 'Followup Interview' %>
 													<%= link_to "Conduct Interview", new_followup_interview_path(:schedule_entry_id => entry.id) %>
@@ -29,6 +29,8 @@
 												<% when 'Other Interview' %>
 													<%= link_to "Conduct Interview", new_other_interview_path(:schedule_entry_id => entry.id)  %>	
 												<% end -%>
+											<% else %>
+												Interview conducted!
 											<% end -%>
 										<% end -%>
 									</td>

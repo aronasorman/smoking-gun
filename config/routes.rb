@@ -21,6 +21,10 @@ GuidanceRails::Application.routes.draw do
 
   resources :followup_interviews
 
+  resources :routine_interviews
+
+  resources :other_interviews
+
   resources :interviews
 
   resources :interview_types

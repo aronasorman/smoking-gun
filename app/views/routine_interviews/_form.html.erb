@@ -1,0 +1,51 @@
+<%= form_for(@routine_interview) do |f| %>
+  <% if @routine_interview.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@routine_interview.errors.count, "error") %> prohibited this routine_interview from being saved:</h2>
+
+      <ul>
+      <% @routine_interview.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :general_mental_ability %><br />
+    <%= f.text_area :general_mental_ability, :cols => 50 %>
+  </div>
+  <div class="field">
+    <%= f.label :academic_history %><br />
+    <%= f.text_area :academic_history, :cols => 50 %>
+  </div>
+  <div class="field">
+    <%= f.label :family_relationship %><br />
+    <%= f.text_area :family_relationship, :cols => 50 %>
+  </div>
+  <div class="field">
+    <label>Personal/Emotional Development</label><br />
+    <%= f.text_area :personal_emotional, :cols => 50 %>
+  </div>
+  <div class="field">
+    <%= f.label :peer_relationship %><br />
+    <%= f.text_area :peer_relationship, :cols => 50 %>
+  </div>
+  <div class="field">
+    <%= f.label :goals %><br />
+    <%= f.text_area :goals, :cols => 50 %>
+  </div>
+  <div class="field">
+    <%= f.label :recommendation %><br />
+    <%= f.text_area :recommendation, :cols => 50 %>
+  </div>
+  <%= fields_for @interview do |ff| %>
+    <%= ff.hidden_field :user_id, :value => @interview.user_id %>
+    <%= ff.hidden_field :student_id, :value => @interview.student_id.to_s %>
+    <%= ff.hidden_field :period_id, :value => @interview.period_id %>
+    <%= ff.hidden_field :interview_type_id, :value => @interview.interview_type_id %>
+  <% end -%>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

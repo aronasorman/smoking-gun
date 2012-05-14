@@ -9,6 +9,27 @@ class Period < ActiveRecord::Base
   	16
   end
 
+  def self.labels
+    [
+      'Period 1 - Student 1',
+      'Period 1 - Student 2',
+      'Period 2 - Student 1',
+      'Period 2 - Student 2',
+      'Period 3 - Student 1',
+      'Period 3 - Student 2',
+      'Period 4 - Student 1',
+      'Period 4 - Student 2',
+      'Period 5 - Student 1',
+      'Period 5 - Student 2',
+      'Period 6 - Student 1',
+      'Period 6 - Student 2',
+      'Period 7 - Student 1',
+      'Period 7 - Student 2',
+      'Period 8 - Student 1',
+      'Period 8 - Student 2',
+    ]
+  end
+
   def self.num 
   	case Rails.env
   	when "development"

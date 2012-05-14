@@ -1,6 +1,7 @@
 <div id="sched">
 					<table>
 						<tr id="headname">
+							<td>Period</td>
 							<td>Monday</td>
 							<td>Tuesday</td>
 							<td>Wednesday</td>
@@ -9,6 +10,7 @@
 						</tr>
 						<% @grouped_periods.each do |period_group| %>
 							<tr>
+								<td><%= cycle *Period.labels %></td>
 								<% period_group.each do |period| %>
 									<td>
 										<% entry = period.schedule_entries.find {|entry| entry.user == current_user } %>

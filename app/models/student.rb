@@ -34,6 +34,7 @@ class Student < ActiveRecord::Base
 
       father = Guardian.new
       father.guardian_type = 'Father'
+      father.age = 0
       father_last_name = row[:pa_lname]
       father_first_name = row[:pa_fname]
       father_title = row[:pa_title]
@@ -46,6 +47,7 @@ class Student < ActiveRecord::Base
 
       mother = Guardian.new
       mother.guardian_type = 'Mother'
+      mother.age = 0
       mother_last_name = row[:pa_lname]
       mother_first_name = row[:pa_fname]
       mother_title = row[:ma_title]

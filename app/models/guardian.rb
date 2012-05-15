@@ -4,5 +4,5 @@ class Guardian < ActiveRecord::Base
 
   belongs_to :student
 
-  validates :age, :numericality => {:greater_than_or_equal_to => 13}
+  validates :age, :numericality => {:greater_than_or_equal_to => 0}
 end

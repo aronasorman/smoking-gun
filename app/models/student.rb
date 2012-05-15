@@ -16,7 +16,7 @@ class Student < ActiveRecord::Base
   def self.import(file)
     require 'date'
   	data = file.read
-  	CSV.parse(data.gsub(150.chr, 'n'), :headers => true, :encoding => "r:ISO8859-1", :header_converters => :symbol).each do |row|
+  	CSV.parse(data.gsub(150.chr, 'n'), :headers => true, :header_converters => :symbol).each do |row|
   		id = row[:studno].gsub('-', '').to_i # remove the dash
   		student = Student.find_or_create_by_student_id(id)
 

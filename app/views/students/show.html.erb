@@ -27,15 +27,15 @@
           <div id="graypart">
           <table>
             <tr>
-              <td id="profhead" colspan="2">Profile:</td>
+              <td id="profhead" colspan="2">Profile</td>
             </tr>
             <tr>
+            <tr>
+              <td><%= image_tag @student.photo%></td>
+            </tr>
               <td class="label1">Name:</td>
               <td> <%= [@student.first_name, @student.middle_name + '.', @student.last_name].join ' ' %>
               </td>
-            </tr>
-            <tr>
-            <td><%= image_tag @student.photo%></td>
             </tr>
             <tr>
               <td class="label1">Nickname:</td>

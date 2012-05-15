@@ -1,4 +1,6 @@
 GuidanceRails::Application.routes.draw do
+  resources :guardians
+  
   get "schedule_entries/editweekly"
 
   get "users/sectionedit"

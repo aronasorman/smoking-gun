@@ -60,7 +60,7 @@ class GuardiansController < ApplicationController
 
     respond_to do |format|
       if @guardian.update_attributes(params[:guardian])
-        format.html { redirect_to @guardian, notice: 'Guardian was successfully updated.' }
+        format.html { redirect_to student_path(@guardian.student, :show_family => 1), notice: 'Guardian was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

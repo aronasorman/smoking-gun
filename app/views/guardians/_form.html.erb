@@ -11,7 +11,48 @@
     </div>
   <% end %>
 
-  <div class="actions">
+  <div id="graypart">
+    <table>
+      <tr>
+        <td id="profhead" colspan="2">Something</td>
+      </tr>
+      <tr>
+        <td><%= f.label :name %></td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :work_address %></td>
+        <td><%= f.text_field :work_address, :size => 90 %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :age %></td>
+        <td><%= f.number_field :age %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :celno, "Cellphone no."%></td>
+        <td><%= f.text_field :celno %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :telno, "Telephone no."%></td>
+        <td><%= f.text_field :celno %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :occupation %></td>
+        <td><%= f.text_field :occupation %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :religion %></td>
+        <td><%= f.text_field :religion %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :is_living, "Living?" %></td>
+        <td><%= f.collection_select :is_living, ["True", "False"], :to_s, :to_s %></td>
+      </tr>
+      <tr>
+        <td><%= f.hidden_field :student_id %></td>
+      </tr>
+    </table>
     <%= f.submit %>
   </div>
+
 <% end %>

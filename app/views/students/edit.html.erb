@@ -1,6 +1,32 @@
-<h1>Editing student</h1>
+<div id="title">
+				<a href="mainpage.html">Home </a>
+				<span id="arrow"> > </span>
+				<a href="editweekly.html"> Edit Student Profile</a>
+			</div>
+			
+			
+		<!-- the only area you can edit-->
+		
+			<div id="editweekly">
+			
+				<div id="details">
+					
+				</div>
+				
+				<div id="sched">
+					
+				</div>
+				
+				<div id="summary">
+					<%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @student %> |
-<%= link_to 'Back', students_path %>
+					<%= link_to 'Show', @student %> |
+					<%= link_to 'Back', students_path %>
+				</div>
+				
+			</div>
+			
+					
+		<!-- the only area you can edit-->
+				
+		<br style="clear:both" /> 

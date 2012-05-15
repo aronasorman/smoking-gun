@@ -1,8 +1,8 @@
-<%= link_to 'Edit', edit_student_path(@student) %>
   <div id="graypart">
   <table>
     <tr>
-      <td id="profhead" colspan="2">Profile:</td>
+      <td id="profhead" colspan="1">Profile:</td>
+      <td id="profhead" colspan="2"><%= link_to 'Edit', edit_student_path(@student) %>
     </tr>
     <tr>
       <td class="label1">Name:</td>
@@ -65,6 +65,32 @@
       <td class="label1">Graduated from:</td>
       <td>
         <%= @student.grade_school %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Sibling comments:</td>
+      <td>
+        <%= @student.sibling_comments %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Family Concerns:</td>
+      <td>
+        <%= @student.family_concerns %>
+      </td>
+    </tr>
+    <% if @student.is_special_guidance_needed %>
+      <tr>
+        <td class="label1">Special Guidance Elaboration:</td>
+        <td>
+          <%= @student.special_guidance_elaboration %>
+        </td>
+      </tr>
+    <% end -%>
+    <tr>
+      <td class="label1">Work Experience:</td>
+      <td>
+        <%= @student.work_experience %>
       </td>
     </tr>
   </table>

@@ -390,7 +390,8 @@ width: 200px;
 }
 
 #profile a{
-text-decoration: none
+text-decoration: none;
+color: #012B5D;
 }
 
 #profile li{

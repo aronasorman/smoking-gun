@@ -1,0 +1,72 @@
+<%= link_to 'Edit', edit_student_path(@student) %>
+  <div id="graypart">
+  <table>
+    <tr>
+      <td id="profhead" colspan="2">Profile:</td>
+    </tr>
+    <tr>
+      <td class="label1">Name:</td>
+      <td> <%= [@student.first_name, @student.middle_name + '.', @student.last_name].join ' ' %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Nickname:</td>
+      <td><%= @student.nickname %></td>
+    </tr>
+    <tr>
+      <td class="label1">City Address:</td>
+      <td>
+        <%= @student.address %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Telephone No.:</td>
+      <td>
+        <%= @student.telno %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Cellphone No.:</td>
+      <td>
+        <%= @student.celno %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">E-mail Address:</td>
+      <td>
+        <%= @student.email %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Date of Birth:</td>
+      <td>
+        <%= @student.birthdate %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Place of Birth:</td>
+      <td>
+        <%= @student.birthplace %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Religion:</td>
+      <td>
+        <%= @student.religion %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Citizenship:</td>
+      <td>
+        <%= @student.citizenship %>
+      </td>
+    </tr>
+    <tr>
+      <td class="label1">Graduated from:</td>
+      <td>
+        <%= @student.grade_school %>
+      </td>
+    </tr>
+  </table>
+  </div>
+</div>

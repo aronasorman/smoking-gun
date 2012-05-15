@@ -1,0 +1,21 @@
+<h1>Listing guardians</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @guardians.each do |guardian| %>
+  <tr>
+    <td><%= link_to 'Show', guardian %></td>
+    <td><%= link_to 'Edit', edit_guardian_path(guardian) %></td>
+    <td><%= link_to 'Destroy', guardian, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Guardian', new_guardian_path %>

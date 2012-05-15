@@ -1,0 +1,27 @@
+<%= form_for(@other_interview) do |f| %>
+  <% if @other_interview.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@other_interview.errors.count, "error") %> prohibited this other_interview from being saved:</h2>
+
+      <ul>
+      <% @other_interview.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :cols => 50 %>
+  </div>
+  <%= fields_for @interview do |ff| %>
+    <%= ff.hidden_field :user_id, :value => @interview.user_id %>
+    <%= ff.hidden_field :student_id, :value => @interview.student_id.to_s %>
+    <%= ff.hidden_field :period_id, :value => @interview.period_id %>
+    <%= ff.hidden_field :interview_type_id, :value => @interview.interview_type_id %>
+  <% end -%>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

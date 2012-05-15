@@ -1,0 +1,52 @@
+<div id="graypart">
+  <% @student.guardians.each do |guardian| %>
+    <table>
+      <tr>
+        <td id="profhead" colspan="1"><%= guardian.guardian_type %></td>
+        <td id="profhead" colspan="1"><%= link_to "Edit " + guardian.guardian_type + " info", edit_guardian_path(guardian) %></td>
+      </tr>
+      <tr>
+        <td class="label1">Guardian Name:</td>
+        <td><%= guardian.name %>
+        </td>
+      </tr>
+      <tr>
+        <td class="label1">Work Address:</td>
+        <td>
+          <%= guardian.work_address %>
+        </td>
+      </tr>
+      <tr>
+        <td class="label1">Telephone No.:</td>
+        <td>
+          <%= guardian.telno %>
+        </td>
+      </tr>
+      <tr>
+        <td class="label1">Cellphone No.:</td>
+        <td>
+          <%= guardian.celno %>
+        </td>
+      </tr>
+      <tr>
+        <td class="label1">E-mail Address:</td>
+        <td>
+          <%= guardian.email %>
+        </td>
+      </tr>
+      <tr>
+        <td class="label1">Religion:</td>
+        <td>
+          <%= guardian.religion %>
+        </td>
+      </tr>
+      <tr>
+        <td class="label1">Living:</td>
+        <td>
+          <%= guardian.is_living %>
+        </td>
+      </tr>
+    </table>
+  <% end -%>
+  </div>
+</div>

@@ -9,6 +9,10 @@ class Student < ActiveRecord::Base
   has_many :interviews
   has_many :schedule_entries
 
+  def to_s
+    [self.first_name, self.last_name].join ' '
+  end
+
   def self.import(file)
     require 'date'
   	data = file.read
@@ -33,7 +37,7 @@ class Student < ActiveRecord::Base
       father_last_name = row[:pa_lname]
       father_first_name = row[:pa_fname]
       father_title = row[:pa_title]
-      father.name = [father_title, father_first_name, father_last_name].join ', '
+      father.name = [father_title, father_first_name, father_last_name].join ' '
       father.occupation = row[:pa_occu]
       father.work_address = row[:pa_office_add]
       father.telno = row[:pa_telno]

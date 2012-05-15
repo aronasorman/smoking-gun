@@ -18,6 +18,9 @@ gem 'fastercsv'
 gem 'kaminari'
 gem 'therubyracer'
 
+# unicorn - multiplexing rails apps to handle lots of clients
+gem 'unicorn'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -16,14 +16,13 @@
          <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
          <%= devise_error_messages! %>
            <div> ID number
-             <%= f.text_field :username %>
-           </div>
-           <br/>
-           <div> Password
-             <%= f.password_field :password %></div>
-           <br/>
-           <div><%= f.submit "Sign in" %></div>
-           <% end %>
+             <%= f.text_field :username %></div>
+             <br/>
+             <div> Password
+              <%= f.password_field :password %></div>
+              <br/>
+              <div><%= f.submit "Sign in" %></div>
+              <% end %>
        </td>
      </tr>
     </table>

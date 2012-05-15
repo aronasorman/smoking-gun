@@ -13,6 +13,7 @@ class Student < ActiveRecord::Base
   has_many :interviews
   has_many :schedule_entries
 
+  has_one :ssha, :hspq, :mpcl, :dat
   has_attached_file :photo
 
   def self.import(file)

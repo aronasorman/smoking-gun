@@ -13,10 +13,11 @@ class Student < ActiveRecord::Base
   has_many :interviews
   has_many :schedule_entries
 
+  has_one :ssha, :hspq, :mpcl, :dat
   has_attached_file :photo
 
   def self.import(file)
-    require 'Date'
+    require 'date'
   	data = file.read
   	CSV.parse(data.gsub(150.chr, 'n'), :headers => true, :encoding => "r:ISO8859-1", :header_converters => :symbol).each do |row|
   		id = row[:studno].gsub('-', '').to_i # remove the dash

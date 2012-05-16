@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :section_id %><br />
-    <%= f.number_field :section_id %>
+    <%= f.collection_select :section_id , Section.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :nickname %><br />

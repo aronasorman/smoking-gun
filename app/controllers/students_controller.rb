@@ -16,11 +16,16 @@ class StudentsController < ApplicationController
   # GET /students/1.json
   def show
     @student = Student.find(params[:id])
-    @name = [@student.first_name, @student.last_name].join ' '
+    if Student.where(:section_id => sections_handled).member? @student
+      @name = [@student.first_name, @student.last_name].join ' '
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @student }
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @student }
+      end
+    else
+      redirect_to students_path
+      flash[:notice] = "You cannot view that student"
     end
   end
 
@@ -38,6 +43,13 @@ class StudentsController < ApplicationController
   # GET /students/1/edit
   def edit
     @student = Student.find(params[:id])
+    if Student.where(:section_id => sections_handled).member? @student
+      @name = [@student.first_name, @student.last_name].join ' '
+      end
+    else
+      redirect_to students_path
+      flash[:notice] = "You cannot edit that student"
+    end
   end
 
   # POST /students

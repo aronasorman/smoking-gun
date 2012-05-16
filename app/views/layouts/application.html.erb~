@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render "styleshit"%>
+  
+  <title>Ateneo High School Guidance Office</title>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="container">
+	
+	<div id="header">
+	</div>
+
+	
+	<div id= "nav">
+		<ul>
+			<form action="" method="get">
+				<li><%= link_to "home", root_url %></li>
+				<li><a href="#">faqs</a></li>
+				<li><a href="#">about us</a></li>
+				<li><%= link_to "logout" , destroy_user_session_path , :method => :delete %></li>
+				<li>		
+					<input type="text" size="20" name="text1" value="type here">
+					<input type="button" name="search" value="search">	
+				</li>
+			</form>
+			
+			
+		</ul>
+	</div>
+	
+	<div id="center">
+	
+		<%= render "sidebar" %>
+		
+		<div id="content">
+			<div id="stamps">
+		
+				<div id="date">
+				</div>
+			
+				<div id="identifiers">
+					<% if user_signed_in? %>
+						User Identified As: <span id="name"><%= current_user.name %></span>
+						<br/>
+						Position: <span id="position" ><%= current_user.role %></span>
+					<% end %>
+				</div>
+				
+				
+			</div>
+			<%= yield %>
+			
+		</div> 
+		
+
+	</div>
+
+	<div id="footer">
+		<p>
+		Ateneo High School Guidance Office Automated System <br/>
+		Designed and developed by A-Team <br/>
+		Copyright 2011 <br/>
+		</p>
+		
+	</div>
+	
+</div>	
+
+</body>
+	<script type="text/javascript" src="/assets/after.js?body=1"></script>
+</html>

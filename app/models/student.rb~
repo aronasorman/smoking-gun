@@ -13,15 +13,17 @@ class Student < ActiveRecord::Base
   has_many :interviews
   has_many :schedule_entries
 
+<<<<<<< HEAD
   def to_s
     [self.first_name, self.last_name].join ' '
   end
-
+=======
   has_one :ssha
   has_one :hspq
   has_one :mpcl
   has_one :dat
   has_attached_file :photo
+>>>>>>> picz
 
   def self.import(file)
     require 'date'

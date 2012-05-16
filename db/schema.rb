@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120515052110) do
+ActiveRecord::Schema.define(:version => 20120516235459) do
 
   create_table "dats", :force => true do |t|
     t.integer  "student_id"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(:version => 20120515052110) do
   end
 
   create_table "followup_interviews", :force => true do |t|
-    t.string   "comments"
-    t.string   "planned_intervention"
+    t.text     "comments"
+    t.text     "planned_intervention"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
     t.integer  "interview_id"

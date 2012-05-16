@@ -31,7 +31,12 @@
     <% end -%>
   </div
 		
-
+<<<<<<< HEAD
+<!-- the only area you can edit-->
+	
+  <br style="clear:both" /> 
+</div>
+=======
 			<div id="counseloraccount">
 				
 				<div id="counselornav">
@@ -129,4 +134,4 @@
 		<!-- the only area you can edit-->
 				
 		<br style="clear:both" /> 
-
+>>>>>>> picz

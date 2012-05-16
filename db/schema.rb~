@@ -11,9 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120514160758) do
+=======
 ActiveRecord::Schema.define(:version => 20120514114152) do
-
+>>>>>>> picz
 
   create_table "followup_interviews", :force => true do |t|
     t.string   "comments"

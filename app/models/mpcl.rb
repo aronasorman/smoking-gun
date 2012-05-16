@@ -1,0 +1,5 @@
+class Mpcl < ActiveRecord::Base
+  attr_accessible :ASW, :CPT, :CSM, :FLE, :FVE, :HF, :HPD, :MR, :PPR, :SPR, :SRA, :student_id
+
+belongs_to :student
+end

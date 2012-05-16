@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_id: 1
+  HPD: 1
+  FLE: 1
+  SRA: 1
+  CSM: 1
+  SPR: 1
+  PPR: 1
+  MR: 1
+  HF: 1
+  FVE: 1
+  ASW: 1
+  CPT: 1
+
+two:
+  student_id: 1
+  HPD: 1
+  FLE: 1
+  SRA: 1
+  CSM: 1
+  SPR: 1
+  PPR: 1
+  MR: 1
+  HF: 1
+  FVE: 1
+  ASW: 1
+  CPT: 1

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_id: 1
+  verbal: 1
+  numerical: 1
+  abstract: 1
+  mechanical: 1
+  spacer_relation: 1
+  spelling: 1
+  language: 1
+
+two:
+  student_id: 1
+  verbal: 1
+  numerical: 1
+  abstract: 1
+  mechanical: 1
+  spacer_relation: 1
+  spelling: 1
+  language: 1

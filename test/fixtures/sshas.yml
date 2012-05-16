@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_id: 1
+  DA: 1
+  WM: 1
+  TA: 1
+  EA: 1
+
+two:
+  student_id: 1
+  DA: 1
+  WM: 1
+  TA: 1
+  EA: 1

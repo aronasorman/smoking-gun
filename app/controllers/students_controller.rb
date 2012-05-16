@@ -44,6 +44,7 @@ class StudentsController < ApplicationController
   # GET /students/1/edit
   def edit
     @student = Student.find(params[:id])
+    sections_handled = current_user.sections.map! {|section| section.id }
     if Student.where(:section_id => sections_handled).member? @student
       @name = [@student.first_name, @student.last_name].join ' '
     else

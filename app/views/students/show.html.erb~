@@ -24,14 +24,13 @@
 				
 				<div id="profile">
 				<%= link_to 'Edit', edit_student_path(@student) %>
+              <div><%= image_tag @student.photo(:thumbnail) %></div
           <div id="graypart">
           <table>
             <tr>
               <td id="profhead" colspan="2">Profile</td>
             </tr>
-            <tr>
-              <td><%= image_tag @student.photo(:small) %></td>
-            </tr>
+
               <td class="label1">Name:</td>
               <td> <%= [@student.first_name, @student.middle_name + '.', @student.last_name].join ' ' %>
               </td>

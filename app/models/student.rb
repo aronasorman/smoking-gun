@@ -17,7 +17,8 @@ class Student < ActiveRecord::Base
   has_one :hspq
   has_one :mpcl
   has_one :dat
-  has_attached_file :photo
+  has_attached_file :photo, :styles => {:small => "150x150!", :medium => "300x300>", :thumbnail => "100x100!"}
+
 
   def self.import(file)
     require 'date'

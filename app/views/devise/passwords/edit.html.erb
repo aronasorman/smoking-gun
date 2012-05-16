@@ -1,19 +1,7 @@
-<div id="title">
-				<a href="mainpage.html">Home </a>
-				<span id="arrow"> > </span>
-				<a href="changepass.html"> Change Password</a>
-			</div>
-			
-			
 		<!--le only area you can edit-->
 		
 			<div id="changepass">
 				<table>
-		
-					<tr>
-						<td colspan=2><span id="cp">Change Your Password</span></td>
-					</tr>
-					
 					<tr>
 						<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
 						  <%= devise_error_messages! %>

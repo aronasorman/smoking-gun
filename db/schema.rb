@@ -11,9 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120514160758) do
-ActiveRecord::Schema.define(:version => 20120514114152) do
+ActiveRecord::Schema.define(:version => 20120515052110) do
 
+  create_table "dats", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "verbal"
+    t.integer  "numerical"
+    t.integer  "abstract"
+    t.integer  "mechanical"
+    t.integer  "spacer_relation"
+    t.integer  "spelling"
+    t.integer  "language"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "followup_interviews", :force => true do |t|
     t.string   "comments"
@@ -40,6 +51,21 @@ ActiveRecord::Schema.define(:version => 20120514114152) do
     t.string   "is_living"
   end
 
+  create_table "hspqs", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "A"
+    t.integer  "B"
+    t.integer  "C"
+    t.integer  "D"
+    t.integer  "E"
+    t.integer  "G"
+    t.integer  "Q2"
+    t.integer  "Q3"
+    t.integer  "Q4"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "interview_types", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -53,6 +79,23 @@ ActiveRecord::Schema.define(:version => 20120514114152) do
     t.integer  "period_id"
     t.integer  "user_id"
     t.integer  "student_id"
+  end
+
+  create_table "mpcls", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "HPD"
+    t.integer  "FLE"
+    t.integer  "SRA"
+    t.integer  "CSM"
+    t.integer  "SPR"
+    t.integer  "PPR"
+    t.integer  "MR"
+    t.integer  "HF"
+    t.integer  "FVE"
+    t.integer  "ASW"
+    t.integer  "CPT"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "nature_of_problem_types", :force => true do |t|
@@ -104,6 +147,16 @@ ActiveRecord::Schema.define(:version => 20120514114152) do
     t.integer  "user_id"
   end
 
+  create_table "sshas", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "DA"
+    t.integer  "WM"
+    t.integer  "TA"
+    t.integer  "EA"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "students", :force => true do |t|
     t.binary   "picture"
     t.string   "first_name"
@@ -138,12 +191,12 @@ ActiveRecord::Schema.define(:version => 20120514114152) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",                    :default => "", :null => false
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                         :default => 0
+    t.integer  "sign_in_count",          :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -153,9 +206,9 @@ ActiveRecord::Schema.define(:version => 20120514114152) do
     t.boolean  "is_head_counselor"
     t.boolean  "is_counselor"
     t.boolean  "is_secretary"
-    t.datetime "created_at",                                            :null => false
-    t.datetime "updated_at",                                            :null => false
-    t.integer  "username",               :limit => 255
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.integer  "username"
     t.string   "role"
   end
 

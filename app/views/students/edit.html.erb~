@@ -1,7 +1,7 @@
 <div id="title">
-				<%= link_to "Home", root_url %>
+				<a href="mainpage.html">Home </a>
 				<span id="arrow"> > </span>
-				<a href="#"> Edit Student Profile</a>
+				<a href="editweekly.html"> Edit Student Profile</a>
 			</div>
 			
 			

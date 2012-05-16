@@ -158,7 +158,7 @@ ActiveRecord::Schema.define(:version => 20120515052110) do
   end
 
   create_table "students", :force => true do |t|
-    t.binary   "picture"
+    t.text     "picture"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "middle_name"
@@ -208,7 +208,7 @@ ActiveRecord::Schema.define(:version => 20120515052110) do
     t.boolean  "is_secretary"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.integer  "username"
+    t.string   "username"
     t.string   "role"
   end
 

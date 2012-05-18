@@ -16,3 +16,6 @@
 /tmp
 
 *-workspace
+
+# stupid temp files of gedit!
+*.erb~

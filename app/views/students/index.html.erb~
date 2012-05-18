@@ -1,7 +1,7 @@
 <div id="title">
 				<%= link_to "Home", root_url %>
 				<span id="arrow"> > </span>
-				<a href="#"> View Student Profiles</a>
+				<a href="viewstudent.html"> View Student Profiles</a>
 			</div>
 			
 			

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div id="title">
-				<%=link_to "Section", sections_path %>
+				<a href="mainpage.html">Section </a>
 				<span id="arrow"> > </span>
 				<a href="#"> <%= @section.name %></a>
 			</div>

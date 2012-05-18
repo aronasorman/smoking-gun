@@ -1,5 +1,5 @@
 <div id="title">
-				<%= link_to "Home", root_url %>
+				<%= link_to "home", root_url %>
 				<span id="arrow"> > </span>
 				<%= link_to "View counselor Accounts", users_path %>
 			</div>

@@ -18,4 +18,7 @@
 *-workspace
 
 # stupid temp files of gedit!
-*.erb~
+*.*~
+
+# ignore cookbooks file
+cookbooks/

@@ -8,6 +8,8 @@ gem 'rails', '3.2.3'
 # for postgres
 gem 'pg'
 
+gem 'rspec'
+
 # login
 gem 'devise'
 

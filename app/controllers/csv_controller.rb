@@ -5,6 +5,11 @@ class CsvController < ApplicationController
 
   def update
   	flash[:notice] = "got a CSV file!"
-  	Thread.new(params[:csv]) {|csv| Student.import(csv) }
+  	Thread.new(params[:csv]) do |csv|
+  		Student.transaction do
+  			Student.archive_all
+	  		Student.import(csv)
+  		end
+  	end
   end
 end

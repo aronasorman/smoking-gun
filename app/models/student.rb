@@ -17,12 +17,16 @@ class Student < ActiveRecord::Base
     [self.first_name, self.last_name].join ' '
   end
 
+  def self.archive_all
+    archived_section = Section.find_by_name "Archived"
+    Student.update_all :section_id => archived_section.id
+  end
+
   has_one :ssha
   has_one :hspq
   has_one :mpcl
   has_one :dat
   has_attached_file :photo, :styles => {:small => "150x150!", :medium => "300x300>", :thumbnail => "100x100!"}
-
 
   def self.import(file)
     require 'date'

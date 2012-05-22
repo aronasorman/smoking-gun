@@ -68,7 +68,6 @@ Vagrant::Config.run do |config|
     chef.add_recipe "git"
     chef.add_recipe "build-essential"
     chef.add_recipe "imagemagick"
-    # chef.add_recipe "rvm"
   end
   #   chef.cookbooks_path = "../my-recipes/cookbooks"
   #   chef.roles_path = "../my-recipes/roles"

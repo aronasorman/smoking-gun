@@ -9,13 +9,7 @@ InterviewType = InterviewType.create([{name: 'Followup Interview'}, {name: 'Rout
 
 NatureOfProblemType.create!([{name: 'Family'}, {name: 'Academics'}, {name: 'Friends'}, {name: 'Others'}])
 
-sections = []
-
-[1, 2, 3, 4].each do |year|
-	('A' .. 'P').each do |title|
-		sections.append Section.create([{name: year.to_s + title}])
-	end
-end
+Section.create {year: 0, name: "Archived"}
 
 require 'date'
 periods = []

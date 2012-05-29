@@ -9,7 +9,7 @@ InterviewType = InterviewType.create([{name: 'Followup Interview'}, {name: 'Rout
 
 NatureOfProblemType.create!([{name: 'Family'}, {name: 'Academics'}, {name: 'Friends'}, {name: 'Others'}])
 
-Section.create {year: 0, name: "Archived"}
+Section.create(name: "Archived")
 
 require 'date'
 periods = []

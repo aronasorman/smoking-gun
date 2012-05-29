@@ -36,7 +36,7 @@ class Student < ActiveRecord::Base
   		student = Student.find_or_create_by_student_id(id)
 
       section = row[:clno][0..1]
-      student.section = Section.find_by_name(section) 
+      student.section = Section.find_or_create_by_name(section) 
       student.first_name = row[:fname]
       student.middle_name = row[:mname]
       student.last_name = row[:lname]

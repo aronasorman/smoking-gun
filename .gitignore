@@ -22,3 +22,10 @@
 
 # ignore cookbooks file
 cookbooks/
+
+# ignore test files
+test/
+
+lib/
+public/
+script/delayed_job

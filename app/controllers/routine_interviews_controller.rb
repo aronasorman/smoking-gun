@@ -41,7 +41,16 @@ class RoutineInterviewsController < ApplicationController
   # GET /routine_interviews/1/edit
   def edit
     @routine_interview = RoutineInterview.find(params[:id])
-    @interview = Interview.find_by_id(@routine_interview.interview_id)
+    @interview = @routine_interview.interview
+
+    if !@interview.is_draft
+      redirect_to @routine_interview
+      flash[:notice] = "Not allowed to edit a non-draft interview"
+    end
+
+    respond_to do |format|
+      format.html
+    end
   end
 
   # POST /routine_interviews

@@ -2,6 +2,9 @@
 
 <br/>
 
+<% if @followup_interview.interview.is_draft? %>
+	<%= link_to "Edit", edit_followup_interview_path(@followup_interview)%> 
+<% end -%>
 <p>
 	<b>Nature Of Problem:</b>
 	<%= @followup_interview.nature_of_problem_type.name %>

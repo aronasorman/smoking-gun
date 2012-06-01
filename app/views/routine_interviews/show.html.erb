@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <br/>
+<% if @routine_interview.interview.is_draft? %>
+  <%= link_to "Edit", edit_routine_interview_path(@routine_interview)%> 
+<% end -%>
 <p>
   <b>General Mental Ability:</b>
   <%= @routine_interview.general_mental_ability %>

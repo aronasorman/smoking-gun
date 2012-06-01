@@ -44,6 +44,11 @@
     <%= ff.hidden_field :student_id, :value => @interview.student_id.to_s %>
     <%= ff.hidden_field :period_id, :value => @interview.period_id %>
     <%= ff.hidden_field :interview_type_id, :value => @interview.interview_type_id %>
+    <div class="field">
+      Draft:
+      true <%= ff.radio_button :is_draft, true, checked: true %>
+      false <%= ff.radio_button :is_draft, false %>
+    </div>
   <% end -%>
   <div class="actions">
     <%= f.submit %>

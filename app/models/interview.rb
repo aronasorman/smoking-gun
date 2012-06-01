@@ -1,6 +1,6 @@
 class Interview < ActiveRecord::Base
   # attr_accessible :title, :body
-  attr_accessible :user_id, :interview_type_id, :period_id, :student_id
+  attr_accessible :user_id, :interview_type_id, :period_id, :student_id, :is_draft
 
   belongs_to :interview_type
   belongs_to :period

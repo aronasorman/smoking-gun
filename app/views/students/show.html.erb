@@ -14,8 +14,7 @@
 	<div id="counselornav">
 		<ul>
       <li><%= link_to "General Information", @student %></li>
-      <!--<li><%= link_to "Family", student_path(@student, :show_family => 1) %></li>-->
-      <a href="#">Family</a>
+      <li><%= link_to "Family", student_path(@student, :show_family => 1) %></li>
       <!--<li><%= link_to "Academic History", student_path(@student, :show_acads => 1) %></li>-->
       <a href="#">Academic History</a>
       <li><%= link_to "Interviews", interviews_path(:student_id => @student.id) %></li>

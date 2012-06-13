@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516235459) do
+ActiveRecord::Schema.define(:version => 20120517040546) do
 
   create_table "dats", :force => true do |t|
     t.integer  "student_id"
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20120516235459) do
     t.integer  "period_id"
     t.integer  "user_id"
     t.integer  "student_id"
+    t.boolean  "is_draft"
   end
 
   create_table "mpcls", :force => true do |t|

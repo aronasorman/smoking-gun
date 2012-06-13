@@ -1,5 +1,5 @@
 <div id="title">
-	<%= link_to "View Student Accounts", student_path %>
+	<%= link_to "View Student Accounts", students_path %>
 	<span id="arrow"> > </span>
 	<a href="#"> Student Profile</a>
 	<br/>

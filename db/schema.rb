@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120529042845) do
+ActiveRecord::Schema.define(:version => 20120618061850) do
 
   create_table "dats", :force => true do |t|
     t.integer  "student_id"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20120529042845) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.string   "is_living"
+    t.string   "alma_mater"
   end
 
   create_table "hspqs", :force => true do |t|
@@ -95,11 +96,7 @@ ActiveRecord::Schema.define(:version => 20120529042845) do
     t.integer  "period_id"
     t.integer  "user_id"
     t.integer  "student_id"
-<<<<<<< HEAD
-    t.boolean  "is_draft"
-=======
     t.boolean  "is_draft",          :default => false
->>>>>>> 068538ac03c9e8cf53d7b5f7c7febba8d27d0829
   end
 
   create_table "mpcls", :force => true do |t|
@@ -199,8 +196,8 @@ ActiveRecord::Schema.define(:version => 20120529042845) do
     t.text     "special_guidance_elaboration"
     t.text     "work_experience"
     t.text     "interests"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
     t.integer  "student_id"
     t.string   "religion"
     t.string   "citizenship"
@@ -209,6 +206,23 @@ ActiveRecord::Schema.define(:version => 20120529042845) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.text     "subjects_good_at"
+    t.text     "subjects_bad_at"
+    t.text     "study_buddy_outside_class"
+    t.integer  "study_time_outside_class"
+    t.text     "where_you_study_outside_class"
+    t.text     "conflicts_with_studying"
+    t.boolean  "being_tutored"
+    t.boolean  "need_special_guidance"
+    t.text     "special_guidance_explanation"
+    t.text     "talents_or_skills"
+    t.text     "extracurricular_activities"
+    t.text     "leisure_time"
+    t.string   "add_topics_in_guidance_class"
+    t.text     "additional_info_for_counselor"
+    t.text     "present_concers"
+    t.text     "who_you_talk_to_about_personal_stuff"
+    t.string   "college"
   end
 
   create_table "users", :force => true do |t|

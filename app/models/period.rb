@@ -32,10 +32,10 @@ class Period < ActiveRecord::Base
 
   def self.num 
   	case Rails.env
-  	when "development"
-  		16
+    when "production"
+      365
   	else
-	  	365
+      16
 	  end
 	end
 end

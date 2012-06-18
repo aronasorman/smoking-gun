@@ -42,7 +42,13 @@ class FollowupInterviewsController < ApplicationController
   # GET /followup_interviews/1/edit
   def edit
     @followup_interview = FollowupInterview.find(params[:id])
+    @nature_of_problem_types = NatureOfProblemType.all
     @interview = Interview.find_by_id(@followup_interview.interview_id)
+
+    if !@interview.is_draft
+      redirect_to @followup_interview
+      flash[:notice] = "Not allowed to edit a non-draft interview"
+    end
   end
 
   # POST /followup_interviews

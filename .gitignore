@@ -19,3 +19,16 @@
 
 /smoking-gun.sublime-project
 /smoking-gun.sublime-workspace
+
+# stupid temp files of gedit!
+*.*~
+
+# ignore cookbooks file
+cookbooks/
+
+# ignore test files
+test/
+
+lib/
+public/
+script/delayed_job

@@ -5,6 +5,7 @@
       <td>Date</td>
       <td>Interview Type</td>
       <td>Counselor</td>
+      <td>Draft?</td>
     </tr>
 
   <% @interviews.each do |interview| %>
@@ -19,6 +20,7 @@
       <% end -%>
       <td><%= interview.interview_type.name %></td>
       <td><%= interview.user.name %></td>
+      <td><%= "Yes" unless !interview.is_draft %></td>
     </tr>
   <% end %>
   </table>

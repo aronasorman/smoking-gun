@@ -45,13 +45,16 @@
         <td><%= f.text_field :religion %></td>
       </tr>
       <tr>
+        <td><%= f.label :alma_mater, "Alma Mater/School" %></td>
+        <td><%= f.text_field :alma_mater %> </td>
+      </tr>
+      <tr>
         <td><%= f.label :is_living, "Living?" %></td>
         <td><%= f.collection_select :is_living, ["True", "False"], :to_s, :to_s %></td>
       </tr>
       <tr>
         <td><%= f.hidden_field :student_id %></td>
       </tr>
-      <%= f.input :alma_mater, :label "Alma Mater"
     </table>
     <%= f.submit %>
   </div>

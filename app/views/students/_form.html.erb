@@ -1,5 +1,5 @@
 
-<%= form_for @student, :html => { :multipart => true } do |f| %>
+<%= simple_form_for @student, :html => { :multipart => true } do |f| %>
   <% if @student.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
@@ -60,7 +60,13 @@
     <%= f.label :birthplace %><br />
     <%= f.text_field :birthplace %>
   </div>
-  <div class="field">
+  <div>
+     <%= f.label :photo %><br />
+     <%= f.file_field :photo %><br />
+  </div>
+
+
+    <div class="field">
     <%= f.label :sibling_comments %><br />
     <%= f.text_area :sibling_comments %>
   </div>
@@ -84,18 +90,63 @@
     <%= f.label :special_guidance_elaboration %><br />
     <%= f.text_area :special_guidance_elaboration %>
   </div>
+
+
   <div class="field">
+    <%= f.input :subjects_good_at, :label => "Good Subjects" %>
+  </div>
+  <div class="field">
+    <%= f.input :subjects_bad_at, :label => "Dire Subjects" %>
+  </div>
+  <div class="field">
+    <%= f.input :study_buddy_outside_class, :label => "Study Partner"%>
+  </div>
+  <div class="field">
+    <%= f.input :study_time_outside_class, :label => "Length of Study Time Outside School" %>
+  </div>
+  <div class="field">
+    <%= f.input :where_you_study_outside_class, :label => "Venue where student studies" %>
+  </div>
+  <div class="field">
+    <%= f.input :conflicts_with_studying, :label => "Conflicts in studying or finishing school work"  %>
+  </div>
+  <div class="field">
+    <%= f.input :being_tutored, :label => "Being Tutored?", :as => :radio, :collection => [["No", false], ["Yes", true]]  %>
+  </div>
+  <div class="field">
+    <%= f.input :talents_or_skills, :label => "Special Talents or Skills" %>
+  </div>
+  <div class="field">
+    <%= f.input :extracurricular_activities, :label => "List of Extracurricular Activities" %>
+  </div>
+    <div class="field">
     <%= f.label :work_experience %><br />
     <%= f.text_area :work_experience %>
   </div>
-  <div class="field">
+    <div class="field">
     <%= f.label :interests %><br />
     <%= f.text_area :interests %>
   </div>
-  <div>
-     <%= f.label :photo %><br />
-     <%= f.file_field :photo %><br />
+  <div class="field">
+    <%= f.input :leisure_time, :label => "What do student do during his leisure time?"%>
   </div>
+  <div class="field">
+    <%= f.input :add_topics_in_guidance_class, :label => "Additional Guidance Class Topics", :as => :check_boxes, :collection => list %>
+  </div>
+  <div class="field">
+    <%= f.input :additional_info_for_counselor, :label => "Other information that could be helpful for counselor"%>
+  </div>
+  <div class="field">
+    <%= f.input :present_concers, :label => "Present Concerns"%>
+  </div>
+  <div class="field">
+    <%= f.input :who_you_talk_to_about_personal_stuff, :label => "Whom student talk to about something personal?"%>
+  </div>
+  <div class="field">
+    <%= f.input :college, :label => "Where student hope/plan to go to college?"%>
+  </div>
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>

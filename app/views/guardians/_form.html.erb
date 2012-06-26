@@ -1,4 +1,4 @@
-<%= form_for(@guardian) do |f| %>
+<%= simple_form_for(@guardian) do |f| %>
   <% if @guardian.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@guardian.errors.count, "error") %> prohibited this guardian from being saved:</h2>
@@ -51,6 +51,7 @@
       <tr>
         <td><%= f.hidden_field :student_id %></td>
       </tr>
+      <%= f.input :alma_mater, :label "Alma Mater"
     </table>
     <%= f.submit %>
   </div>

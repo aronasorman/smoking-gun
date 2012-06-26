@@ -17,7 +17,7 @@ gem 'fastercsv'
 # for pagination
 gem 'kaminari'
 gem 'therubyracer'
-
+gem 'simple_form'
 # unicorn - multiplexing rails apps to handle lots of clients
 gem 'unicorn'
 

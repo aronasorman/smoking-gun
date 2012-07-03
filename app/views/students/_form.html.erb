@@ -1,94 +1,64 @@
 
 <%= simple_form_for @student, :html => { :multipart => true } do |f| %>
   <% if @student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
-
-      <ul>
-      <% @student.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+    
   <% end %>
 
-<!--   <div class="field">
-    <%= f.label :picture %><br />
-    <%= f.file_field :picture %>
-  </div>
- -->  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
+ <div class="field">
+    <%= f.input :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
+    <%= f.input :last_name %><br />
   </div>
   <div class="field">
-    <%= f.label :middle_name %><br />
-    <%= f.text_field :middle_name %>
+    <%= f.input :middle_name %><br />
   </div>
   <div class="field">
-    <%= f.label :section_id %><br />
-    <%= f.collection_select :section_id , Section.all, :id, :name %>
+    <%= f.input :section, :collection => Section.all , :value_method => :id, :label_method => :name, :include_blank => false %><br />
+  </div>
+   <div class="field">
+    <%= f.input :nickname %><br />
   </div>
   <div class="field">
-    <%= f.label :nickname %><br />
-    <%= f.text_field :nickname %>
+    <%= f.input :address %><br />
   </div>
   <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <%= f.input :telno %><br />
   </div>
   <div class="field">
-    <%= f.label :telno %><br />
-    <%= f.text_field :telno %>
+    <%= f.input :celno %><br />
   </div>
   <div class="field">
-    <%= f.label :celno %><br />
-    <%= f.text_field :celno %>
+    <%= f.input :email %><br />
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.input :birthdate %><br />
   </div>
   <div class="field">
-    <%= f.label :birthdate %><br />
-    <%= f.date_select :birthdate %>
-  </div>
-  <div class="field">
-    <%= f.label :birthplace %><br />
-    <%= f.text_field :birthplace %>
+    <%= f.input :birthplace %><br />
   </div>
   <div>
-     <%= f.label :photo %><br />
-     <%= f.file_field :photo %><br />
+    <%= f.file_field :photo %><br />
   </div>
 
 
     <div class="field">
-    <%= f.label :sibling_comments %><br />
-    <%= f.text_area :sibling_comments %>
+    <%= f.input :sibling_comments %><br />
   </div>
   <div class="field">
-    <%= f.label :family_concerns %><br />
-    <%= f.text_area :family_concerns %>
+    <%= f.input :family_concerns %><br />
   </div>
   <div class="field">
-    <%= f.label :most_significant_person %><br />
-    <%= f.text_field :most_significant_person %>
+    <%= f.input :most_significant_person %><br />
   </div>
   <div class="field">
-    <%= f.label :why_significant %><br />
-    <%= f.text_area :why_significant %>
+    <%= f.input :why_significant %><br />
   </div>
   <div class="field">
-    <%= f.label :is_special_guidance_needed %><br />
-    <%= f.check_box :is_special_guidance_needed %>
+    <%= f.input :is_special_guidance_needed,:as => :check_boxes, :collection => [["No", false], ["Yes", true]] %><br />
   </div>
   <div class="field">
-    <%= f.label :special_guidance_elaboration %><br />
-    <%= f.text_area :special_guidance_elaboration %>
+    <%= f.input :special_guidance_elaboration %><br />
   </div>
 
 
@@ -120,18 +90,16 @@
     <%= f.input :extracurricular_activities, :label => "List of Extracurricular Activities" %>
   </div>
     <div class="field">
-    <%= f.label :work_experience %><br />
-    <%= f.text_area :work_experience %>
+    <%= f.input :work_experience %><br />
   </div>
     <div class="field">
-    <%= f.label :interests %><br />
-    <%= f.text_area :interests %>
+    <%= f.input :interests %><br />
   </div>
   <div class="field">
     <%= f.input :leisure_time, :label => "What do student do during his leisure time?"%>
   </div>
-  <div class="field">
-    <%= f.input :add_topics_in_guidance_class, :label => "Additional Guidance Class Topics", :as => :check_boxes, :collection => list %>
+   <div class="field">
+    <%= f.input :add_topics_in_guidance_class, :label => "Additional Guidance Class Topics", :collection => list %>
   </div>
   <div class="field">
     <%= f.input :additional_info_for_counselor, :label => "Other information that could be helpful for counselor"%>
@@ -148,6 +116,6 @@
   
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>

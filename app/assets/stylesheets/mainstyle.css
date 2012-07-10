@@ -371,13 +371,15 @@ padding-top: 20px;
 }
 
 #graypart{
-width:200px;
+width:210px;
 background-color: #f0f0f0;
+margin-top: 20px;
 }
 
 #profile table{
 width:700px;
-margin-top: 20px;
+margin-top: -20px;
+margin-bottom:20px;
 }
 
 #profhead{
